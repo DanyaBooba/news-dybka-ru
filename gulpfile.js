@@ -22,7 +22,7 @@ function njk() {
 // Style
 //
 
-function style() {
+function css() {
 	return gulp
 		.src("src/css/*.css")
 		.pipe(autoprefixer())
@@ -33,6 +33,42 @@ function style() {
 		.pipe(autoprefixer())
 		.pipe(cssmin())
 		.pipe(gulp.dest("dist/css"));
+}
+
+//
+// JS
+//
+
+function js() {
+	return gulp.src("src/js/**/*.js").pipe(gulp.dest("dist/js"));
+}
+
+//
+// Fonts
+//
+
+function fonts() {
+	return gulp.src("src/fonts/**/*").pipe(gulp.dest("dist/fonts"));
+}
+
+//
+// Images
+//
+
+function images() {
+	return gulp.src("src/img/**/*").pipe(gulp.dest("dist/img"));
+}
+
+//
+// Folder more
+//
+
+function folder() {
+	return gulp
+		.src("src/more/**/*")
+		.pipe(gulp.dest("dist/"))
+		.pipe(gulp.src("src/more/.htaccess"))
+		.pipe(gulp.dest("dist/"));
 }
 
 //
