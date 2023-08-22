@@ -65,10 +65,24 @@ function images() {
 
 function folder() {
 	return gulp
-		.src("src/more/**/*")
+		.src("src/_more/**/*")
 		.pipe(gulp.dest("dist/"))
-		.pipe(gulp.src("src/more/.htaccess"))
+		.pipe(gulp.src("src/_more/.htaccess"))
 		.pipe(gulp.dest("dist/"));
+}
+
+//
+// Server
+//
+
+function server() {
+	sync.init({
+		ui: false,
+		notify: false,
+		server: {
+			baseDir: "dist",
+		},
+	});
 }
 
 //
@@ -77,8 +91,12 @@ function folder() {
 
 function watch() {
 	gulp.watch("src/**/*.html", njk);
+	gulp.watch("src/**/*.css", css);
+	gulp.watch("src/**/*.js", js);
+	gulp.watch(
+		["src/more/**/*", "src/fonts/**/*", "src/img/**/*"],
+		gulp.series(copyFont, copyImg, copyMore)
+	);
 }
 
 exports.default = gulp.series(njk, watch);
-
-exports.style = style;
