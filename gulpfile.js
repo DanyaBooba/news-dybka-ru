@@ -13,7 +13,7 @@ const sync = require("browser-sync");
 
 function njk() {
 	return gulp
-		.src("src/*.html")
+		.src("src/*.html") // Исключить: layout
 		.pipe(nunjucks.compile())
 		.pipe(gulp.dest("dist"));
 }
@@ -24,12 +24,12 @@ function njk() {
 
 function css() {
 	return gulp
-		.src("src/css/*.css")
+		.src("src/app/css/*.css")
 		.pipe(autoprefixer())
 		.pipe(concatCss("index.css"))
 		.pipe(cssmin())
 		.pipe(gulp.dest("dist/css"))
-		.pipe(gulp.src("src/css/_static/**/*.css"))
+		.pipe(gulp.src("src/app/css/_static/**/*.css"))
 		.pipe(autoprefixer())
 		.pipe(cssmin())
 		.pipe(gulp.dest("dist/css"));
@@ -40,7 +40,7 @@ function css() {
 //
 
 function js() {
-	return gulp.src("src/js/**/*.js").pipe(gulp.dest("dist/js"));
+	return gulp.src("src/app/js/**/*.js").pipe(gulp.dest("dist/js"));
 }
 
 //
@@ -48,7 +48,7 @@ function js() {
 //
 
 function fonts() {
-	return gulp.src("src/fonts/**/*").pipe(gulp.dest("dist/fonts"));
+	return gulp.src("src/app/fonts/**/*").pipe(gulp.dest("dist/fonts"));
 }
 
 //
@@ -56,7 +56,7 @@ function fonts() {
 //
 
 function images() {
-	return gulp.src("src/img/**/*").pipe(gulp.dest("dist/img"));
+	return gulp.src("src/app/img/**/*").pipe(gulp.dest("dist/img"));
 }
 
 //
@@ -99,4 +99,11 @@ function watch() {
 	);
 }
 
-exports.default = gulp.series(njk, watch);
+//
+// Default Task
+//
+
+exports.default = gulp.series(
+	gulp.parallel(njk, css, js, fonts, folder, images),
+	gulp.parallel(watch, server)
+);
