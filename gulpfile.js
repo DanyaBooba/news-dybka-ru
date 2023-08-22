@@ -64,11 +64,7 @@ function images() {
 //
 
 function folder() {
-	return gulp
-		.src("src/_more/**/*")
-		.pipe(gulp.dest("dist/"))
-		.pipe(gulp.src("src/_more/.htaccess"))
-		.pipe(gulp.dest("dist/"));
+	return gulp.src("src/app/more/**/*").pipe(gulp.dest("dist"));
 }
 
 //
@@ -94,8 +90,8 @@ function watch() {
 	gulp.watch("src/**/*.css", css);
 	gulp.watch("src/**/*.js", js);
 	gulp.watch(
-		["src/more/**/*", "src/fonts/**/*", "src/img/**/*"],
-		gulp.series(copyFont, copyImg, copyMore)
+		["src/app/more/**/*", "src/app/fonts/**/*", "src/app/img/**/*"],
+		gulp.parallel(folder, fonts, images)
 	);
 }
 
