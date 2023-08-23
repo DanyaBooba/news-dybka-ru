@@ -15,6 +15,9 @@ function njk() {
 	return gulp
 		.src("src/*.html") // Исключить: layout
 		.pipe(nunjucks.compile())
+		.pipe(gulp.dest("dist"))
+		.pipe(gulp.src("src/posts/**/*.html"))
+		.pipe(nunjucks.compile())
 		.pipe(gulp.dest("dist"));
 }
 

@@ -1,0 +1,79 @@
+.code {
+    margin-bottom: 30px;
+}
+
+.code-copy {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    width: 170px;
+    padding: 10px;
+    border-radius: var(--border-radius-1);
+    background: var(--color-danger);
+
+    font-family: Geologica-Light;
+}
+
+.code-copy:hover,
+.code-copy:focus {
+    background: var(--color-danger-hover);
+}
+
+.code-copy button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+}
+
+.code-copy svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+main pre {
+    background: var(--bg-light-3);
+    border-radius: var(--border-radius-2);
+    padding: 30px;
+    width: 100%;
+}
+
+code,
+code p {
+    font-family: var(--bs-font-monospace) !important;
+    font-size: 16px !important;
+}
+
+code p {
+    margin: 0 !important;
+}
+
+.count {
+    counter-increment: line-count;
+    color: var(--text-color-2);
+    text-align: end;
+    font-family: monospace;
+}
+
+.count::before {
+    content: counter(line-count);
+}
+
+.code .counter
+{
+    user-select: none !important;
+    margin-right: 20px;
+    font-size: 16px;
+}
