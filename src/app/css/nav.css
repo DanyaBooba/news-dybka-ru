@@ -10,16 +10,19 @@
     padding-bottom: 3px;
 }
 
-.nav-link-padding
+/* .nav-link-padding
 {
     padding-left: 1rem;
     padding-right: 1rem;
-}
+} */
 
 .header--nav-link {
-    height: 43px;
+    padding: 1rem !important;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.header--nav-link:hover {
+.header--nav-link:hover,
+.header--nav-link:focus {
     background: var(--bg-color);
 }
