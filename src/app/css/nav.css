@@ -20,11 +20,13 @@
     padding: 1rem !important;
     margin-left: 5px !important;
     margin-right: 5px !important;
+    color: var(--text-default) !important;
 }
 
 .header--nav-link:hover,
 .header--nav-link:focus {
     background: var(--bg-color);
+    color: var(--text-default) !important;
 }
 
 .header--nav-button-in {
