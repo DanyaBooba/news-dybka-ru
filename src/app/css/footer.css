@@ -1,6 +1,6 @@
 .footer--main
 {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .footer--main .footer--text-copyright
@@ -11,12 +11,18 @@
 .footer--main .footer--text-link
 {
     padding-left: 0px;
+    color: var(--text-color-2);
+    transition: .3s;
+}
+
+.footer--main .footer--text-link:hover,
+.footer--main .footer--text-link:focus {
     color: var(--text-default);
 }
 
 .footer--main .footer--block-copyright
 {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .footer--main .footer--block-copyright p {
