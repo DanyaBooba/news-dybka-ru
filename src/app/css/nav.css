@@ -26,3 +26,13 @@
 .header--nav-link:focus {
     background: var(--bg-color);
 }
+
+.header--nav-button-in {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+.header--nav-button
+{
+    margin-bottom: 4.2px;
+}
