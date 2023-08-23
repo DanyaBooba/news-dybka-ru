@@ -1,4 +1,11 @@
 .nav--main
 {
     background-color: var(--nav-bg);
+
+    margin-bottom: 30px;
+}
+
+.nav-link--h3-mb
+{
+    margin-bottom: 3px;
 }
