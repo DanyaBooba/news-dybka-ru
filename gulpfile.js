@@ -77,7 +77,19 @@ function fonts() {
 //
 
 function images() {
-	return gulp.src("src/app/img/**/*").pipe(gulp.dest("dist/img"));
+	return gulp
+		.src("src/app/img/**/*")
+		.pipe(gulp.dest("dist/img"))
+		.pipe(
+			gulp.src([
+				"src/posts/**/*.jpg",
+				"src/posts/**/*.png",
+				"src/posts/**/*.jfif",
+				"src/posts/**/*.webp",
+				"src/posts/**/*.jpeg",
+			])
+		)
+		.pipe(gulp.dest("dist"));
 }
 
 //
