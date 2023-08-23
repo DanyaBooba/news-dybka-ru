@@ -127,16 +127,17 @@
             </a>
         </div>
         <button type="button" class="ms-auto btn" data-bs-dismiss="offcanvas" aria-label="Закрыть мобильное меню">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="fill: var(--btn-light-click)"
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="icon"
                 viewBox="0 0 16 16">
                 <path
-                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
             </svg>
         </button>
     </div>
     <div class="offcanvas-body">
         <div class="d-flex flex-wrap flex-column">
-            <a href="/p/" aria-label="Открыть статьи" class="header--mobile-item fs-4">
+
+            <a href="#" class="offcanvas--item fs-4">
                 <span class="d-flex flex-wrap align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="me-3"
                         viewBox="0 0 16 16">
@@ -146,7 +147,8 @@
                     Статьи
                 </span>
             </a>
-            <a href="/p/" aria-label="Открыть категорию Обновления" class="header--mobile-item fs-4">
+
+            <a href="#" class="offcanvas--item fs-4">
                 <span class="d-flex flex-wrap align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="me-3"
                         viewBox="0 0 16 16">
@@ -156,7 +158,8 @@
                     Обновления
                 </span>
             </a>
-            <a href="/p/" aria-label="Открыть категорию ИГРЫ" class="header--mobile-item fs-4">
+
+            <a href="#" class="offcanvas--item fs-4">
                 <span class="d-flex flex-wrap align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="me-3"
                         viewBox="0 0 16 16">
@@ -168,7 +171,8 @@
                     Игры
                 </span>
             </a>
-            <a href="/p/" aria-label="Открыть категорию ТЕХНИКА" class="header--mobile-item fs-4">
+
+            <a href="#" class="offcanvas--item fs-4">
                 <span class="d-flex flex-wrap align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="me-3"
                         viewBox="0 0 16 16">
@@ -179,7 +183,8 @@
                     Техника
                 </span>
             </a>
-            <a href="/more/" aria-label="Открыть категорию ЕЩЕ" class="header--mobile-item fs-4">
+
+            <a href="#" class="offcanvas--item fs-4">
                 <span class="d-flex flex-wrap align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="me-3"
                         viewBox="0 0 16 16">
@@ -189,6 +194,7 @@
                     Еще
                 </span>
             </a>
+
             <button onClick="ChangeTheme()" aria-label="Сменить темную и светлую тему"
                 class="header--mobile-item border-0 text-start fs-4">
                 <span class="d-flex flex-wrap align-items-center">
@@ -232,7 +238,7 @@
 
 {% block footer %}
 <footer>
-    FOOTER
+
 </footer>
 
 <script src="/js/bootstrap.bundle.min.js"></script>
