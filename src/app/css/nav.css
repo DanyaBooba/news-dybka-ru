@@ -18,8 +18,8 @@
 
 .header--nav-link {
     padding: 1rem !important;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
 }
 
 .header--nav-link:hover,
