@@ -1,8 +1,4 @@
 @media(max-width: 991px) {
-    .course-empty {
-        display: none !important;
-    }
-
     .see-at-pc {
         display: none !important;
     }
