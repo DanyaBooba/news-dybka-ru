@@ -7,5 +7,19 @@
 
 .nav-link--h3-mb
 {
-    margin-bottom: 3px;
+    padding-bottom: 3px;
+}
+
+.nav-link-padding
+{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.header--nav-link {
+    height: 43px;
+}
+
+.header--nav-link:hover {
+    background: var(--bg-color);
 }
