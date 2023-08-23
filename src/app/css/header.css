@@ -20,3 +20,22 @@
 .header a:hover nobr {
     color: var(--text-color-2);
 }
+
+.header--size-logo-mobile
+{
+    width: 200px;
+}
+
+.header--size-button-mobile {
+    width: 32px;
+}
+
+@media(max-width: 350px) {
+    .header--size-logo-mobile {
+        width: 125px;
+    }
+
+    .header--size-button-mobile {
+        width: 23px;
+    }
+}
