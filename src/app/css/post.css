@@ -1,3 +1,45 @@
+.post--font-size
+{
+    font-size: 1.25rem !important;
+}
+
+.post--start-p
+{
+    color: var(--text-muted);
+}
+
+.post--start
+{
+    margin-bottom: 30px;
+}
+
+.post--start-img
+{
+    margin-bottom: 30px;
+}
+
+.post--start-img img {
+    margin-bottom: 5px;
+    border-radius: 1rem !important;
+}
+
+.main--post
+{
+    margin-top: 0px;
+    padding-top: 0px;
+    /* padding-top: 15px; */
+}
+
+.post--more
+{
+    padding-top: 50px;
+    font-size: 16px;
+}
+
+.post--more-text {
+    color: var(--text-muted);
+}
+
 .post h2,
 .post h3,
 .post h4,

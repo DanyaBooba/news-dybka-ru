@@ -1,0 +1,49 @@
+@media(min-width: 1400px) {
+    .container--main {
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+}
+
+.container--post
+{
+    padding-left: 200px;
+    padding-right: 400px;
+}
+
+.container--post-head {
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+@media(max-width: 1400px) {
+    .container--post {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .container--post-head {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .container--post {
+        padding: 0;
+    }
+
+    .container--post-head {
+        padding: 0;
+    }
+}
+
+.container--more-block
+{
+    margin-top: 50px;
+    background-color: var(--bg-more-block);
+    padding: 15px;
+    border-radius: 25px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+}

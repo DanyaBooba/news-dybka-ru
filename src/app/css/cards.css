@@ -1,0 +1,75 @@
+.card--bg-gradient {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media(max-width: 767px) {
+    .card--bg-gradient {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
+    }
+}
+
+.card--link {
+    transition: .3s;
+}
+
+.card--link:hover {
+    box-shadow: 0 .5rem 1rem rgba(var(--bs-body-color-rgb), .15) !important;
+}
+
+.card--rounded
+{
+    border-radius: 8px;
+}
+
+.card--title {
+    font-family: HalvarBreit;
+}
+
+.card--title-1
+{
+    font-size: 2.5rem;
+    margin-bottom: 10px !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+
+.card--title-2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+@media(max-width: 991px) {
+    .card--title-1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+
+    .card--title-2 {
+        font-size: 1.5rem;
+        margin-bottom: 5px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+}
+
+@media(max-width: 400px) {
+    .card--title-1 {
+        font-size: 1rem;
+        margin-bottom: 2px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    .card--title-2 {
+        font-size: 1rem;
+        margin-bottom: 2px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+}

@@ -56,3 +56,68 @@ b {
     margin-bottom: 20px;
     margin-top: 50px;
 }
+
+:root {
+    --bs-border-radius: 1rem !important;
+}
+
+body {
+    /* background-image: var(--bg-image); */
+    background-color: var(--bg-color);
+}
+
+.icon-invert {
+    fill: var(--active) !important;
+}
+
+.icon {
+    fill: var(--invert) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+div,
+span,
+i,
+b {
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    letter-spacing: -0.7px;
+}
+
+.card-img {
+    border-radius: 1rem !important;
+}
+
+.card--rounded {
+    border-radius: 1rem !important;
+}
+
+.fontsizeedit {
+    color: var(--text-hover);
+    font-size: 16px !important;
+}

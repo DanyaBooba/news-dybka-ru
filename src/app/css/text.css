@@ -1,0 +1,12 @@
+.text-invert {
+    color: var(--text-color-invert);
+}
+
+.text-invert-dark {
+    color: var(--text-color) !important;
+}
+
+.text-color-hover
+{
+    color: var(--text-hover) !important;
+}
