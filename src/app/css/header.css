@@ -2,6 +2,8 @@
     padding-top: 30px;
     margin-bottom: 20px;
 
+    animation: header-bg-animation 2s infinite;
+
     background-image: linear-gradient(180deg, rgba(var(--bg-color-rgba-2), 0.01), rgba(var(--bg-color-rgba-2), 1) 85%),
             radial-gradient(ellipse at top left, rgba(255, 228, 132, 0.5), transparent 50%),
             radial-gradient(ellipse at top right, rgba(13, 110, 253, 0.5), transparent 50%),
@@ -37,5 +39,31 @@
 
     .header--size-button-mobile {
         width: 23px;
+    }
+}
+
+@keyframes header-bg-animation {
+    0% {
+        background-image: linear-gradient(180deg, rgba(var(--bg-color-rgba-2), 0.01), rgba(var(--bg-color-rgba-2), 1) 85%),
+                radial-gradient(ellipse at top left, rgba(255, 228, 132, 0.5), transparent 50%),
+                radial-gradient(ellipse at top right, rgba(13, 110, 253, 0.5), transparent 50%),
+                radial-gradient(ellipse at center right, rgba(214, 51, 132, 0.5), transparent 50%),
+                radial-gradient(ellipse at center left, rgba(112, 44, 249, 0.5), transparent 50%);
+    }
+
+    50% {
+        background-image: linear-gradient(180deg, rgba(var(--bg-color-rgba-2), 0.01), rgba(var(--bg-color-rgba-2), 1) 85%),
+                radial-gradient(ellipse at top left, rgba(112, 44, 249, 0.5), transparent 50%),
+                radial-gradient(ellipse at top right, rgba(255, 228, 132, 0.5), transparent 50%),
+                radial-gradient(ellipse at center right, rgba(13, 110, 253, 0.5), transparent 50%),
+                radial-gradient(ellipse at center left, rgba(214, 51, 132, 0.5), transparent 50%);
+    }
+
+    100% {
+        background-image: linear-gradient(180deg, rgba(var(--bg-color-rgba-2), 0.01), rgba(var(--bg-color-rgba-2), 1) 85%),
+                radial-gradient(ellipse at top left, rgba(214, 51, 132, 0.5), transparent 50%),
+                radial-gradient(ellipse at top right, rgba(112, 44, 249, 0.5), transparent 50%),
+                radial-gradient(ellipse at center right, rgba(255, 228, 132, 0.5), transparent 50%),
+                radial-gradient(ellipse at center left, rgba(13, 110, 253, 0.5), transparent 50%);
     }
 }

@@ -1,0 +1,24 @@
+/* .circle {
+    background: green;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    animation: header-bg-animation 2s infinite;
+}
+
+@keyframes header-bg-animation {
+    0% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5)
+    }
+
+    50% {
+        -webkit-transform: scale(1.0, 1.0);
+        transform: scale(1.0, 1.0);
+    }
+
+    100% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+    }
+} */
