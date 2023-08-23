@@ -32,7 +32,7 @@ function css() {
 		.pipe(concatCss("index.css"))
 		.pipe(cssmin())
 		.pipe(gulp.dest("dist/css"))
-		.pipe(gulp.src("src/app/css/_static/**/*.css"))
+		.pipe(gulp.src("src/app/css/_static/*.css"))
 		.pipe(autoprefixer())
 		.pipe(cssmin())
 		.pipe(gulp.dest("dist/css"));
