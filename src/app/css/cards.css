@@ -23,38 +23,46 @@
     border-radius: 8px;
 }
 
+.card-subtitle {
+    font-family: Geologica-Light;
+    color: var(--text-color-4);
+    font-size: 14px;
+}
+
 .card--title {
     font-family: HalvarBreit;
+}
+
+.card--title-1-padding {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
 }
 
 .card--title-1
 {
     font-size: 2.5rem;
     margin-bottom: 10px !important;
-    margin-left: 20px !important;
-    margin-right: 20px !important;
+}
+
+.card--title-2-padding {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
 }
 
 .card--title-2 {
     font-size: 1.5rem;
     margin-bottom: 5px !important;
-    margin-left: 10px !important;
-    margin-right: 10px !important;
 }
 
 @media(max-width: 991px) {
     .card--title-1 {
         font-size: 1.5rem;
         margin-bottom: 10px !important;
-        margin-left: 20px !important;
-        margin-right: 20px !important;
     }
 
     .card--title-2 {
         font-size: 1.5rem;
         margin-bottom: 5px !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
     }
 }
 
@@ -62,6 +70,9 @@
     .card--title-1 {
         font-size: 1rem;
         margin-bottom: 2px !important;
+    }
+
+    .card--title-1-padding {
         margin-left: 10px !important;
         margin-right: 10px !important;
     }
@@ -69,7 +80,5 @@
     .card--title-2 {
         font-size: 1rem;
         margin-bottom: 2px !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
     }
 }
