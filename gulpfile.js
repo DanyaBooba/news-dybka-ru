@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const nunjucks = require("gulp-nunjucks");
+const nunjucksRender = require("gulp-nunjucks-render");
 
-// import htmlmin from "gulp-htmlmin";
 const cssmin = require("gulp-cssmin");
 const concatCss = require("gulp-concat-css");
 const autoprefixer = require("gulp-autoprefixer");
@@ -12,31 +12,40 @@ const sync = require("browser-sync");
 //
 
 function njk() {
+	// 	.pipe(gulp.src("src/games/**/*.html"))
+	// 	.pipe(nunjucks.compile())
+	// 	.pipe(gulp.dest("dist/games"))
+	// 	.pipe(gulp.src("src/news/**/*.html"))
+	// 	.pipe(nunjucks.compile())
+	// 	.pipe(gulp.dest("dist/news"))
+	// 	.pipe(gulp.src("src/updates/**/*.html"))
+	// 	.pipe(nunjucks.compile())
+	// 	.pipe(gulp.dest("dist/updates"))
+	// 	.pipe(gulp.src("src/about/**/*.html"))
+	// 	.pipe(nunjucks.compile())
+	// 	.pipe(gulp.dest("dist/about"))
+	// 	.pipe(gulp.src("src/more/**/*.html"))
+	// 	.pipe(nunjucks.compile())
+	// 	.pipe(gulp.dest("dist/more"))
+	// 	.pipe(gulp.src("src/tech/**/*.html"))
+	// 	.pipe(nunjucks.compile())
+	// 	.pipe(gulp.dest("dist/tech"));
+
 	return gulp
-		.src("src/*.html")
-		.pipe(nunjucks.compile())
+		.src(["src/*.html", "src/posts/**/*.html"])
+		.pipe(
+			nunjucksRender({
+				path: ["src/layouts/"],
+			})
+		)
 		.pipe(gulp.dest("dist"))
-		.pipe(gulp.src("src/posts/**/*.html"))
-		.pipe(nunjucks.compile())
-		.pipe(gulp.dest("dist"))
-		.pipe(gulp.src("src/games/**/*.html"))
-		.pipe(nunjucks.compile())
-		.pipe(gulp.dest("dist/games"))
-		.pipe(gulp.src("src/news/**/*.html"))
-		.pipe(nunjucks.compile())
-		.pipe(gulp.dest("dist/news"))
-		.pipe(gulp.src("src/updates/**/*.html"))
-		.pipe(nunjucks.compile())
-		.pipe(gulp.dest("dist/updates"))
-		.pipe(gulp.src("src/about/**/*.html"))
-		.pipe(nunjucks.compile())
-		.pipe(gulp.dest("dist/about"))
-		.pipe(gulp.src("src/more/**/*.html"))
-		.pipe(nunjucks.compile())
-		.pipe(gulp.dest("dist/more"))
-		.pipe(gulp.src("src/tech/**/*.html"))
-		.pipe(nunjucks.compile())
-		.pipe(gulp.dest("dist/tech"));
+		.pipe(gulp.src("src/pages/**/*.html"))
+		.pipe(
+			nunjucksRender({
+				path: ["src/layouts/"],
+			})
+		)
+		.pipe(gulp.dest("dist"));
 }
 
 //
