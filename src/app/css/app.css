@@ -121,3 +121,26 @@ h6,
     color: var(--text-hover);
     font-size: 16px !important;
 }
+
+.post--block
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.post--block p {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.post--block ul {
+    font-size: 25px;
+}
+
+.post--block li {
+    margin-bottom: 10px;
+}
+
+.post--block h2 {
+    margin-bottom: 10px;
+}
