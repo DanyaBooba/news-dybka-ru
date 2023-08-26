@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
-@@include('../../../parts/head.html', {
-"title": "Как я разрабатываю сайты на PHP"
-})
-<link rel="stylesheet" href="/css/page.css">
+{% extends "post.html" %}
 
-<body>
-    @@include('../../../parts/header.html', {
+{% block content %}
 
-    })
-
-    <main id="post--main" class="container post--font-size main--post">
-
-        @@include('../../../parts/p--font-size.html', {
-
-        })
-
-        <div class="container--post-head ">
             <h1>Как я разрабатываю сайты на PHP</h1>
-            <p class="post--start-p">Небольшой гайд.</p>
-        </div>
 
-        <figure class="post--start-img text-center">
-            <img src="/img/posts/p006.jpg" class="img-fluid w-100" alt="Открытый код программы">
-            <figcaption class="img--desc">Открытый код программы</figcaption>
-        </figure>
+            <img src="cap.jpg" alt="Наушники Apple AirPods Pro 1 поколения на черном фоне">
 
-        <div class="container--post">
+
+
             <p>
                 За 3 года активной разработки проектов в web-среде для личного пользования и людям на заказ я вывел некоторую форму
                 удобной сортировки проекта. Решил рассказать об этом людям, так как скоро буду менять стиль разработки.
@@ -160,25 +141,7 @@
             <p>
                 Используйте то, что Вам нравится больше всего и подходит для решения задач. Удачи!
             </p>
-        </div>
 
-
-            <p class="post--main-more">Автор:
-                <a href="/author/daniildybka" class="link">Даниил Дыбка</a>
-            </p>
             <p class="post--main-more">06.02.23 12:00</p>
-        </div>
 
-        @@include('../../../parts/p--more-post.html', {
-        "active": "p-how-I-develop-websites-in-php"
-        })
-
-    </main>
-
-    <script src="/js/post.js"></script>
-    @@include('../../../parts/footer.html', {
-
-    })
-</body>
-
-</html>
+            {% endblock %}

@@ -1,156 +1,61 @@
-<!DOCTYPE html>
-<html lang="ru">
-@@include('../../../parts/head.html', {
-"title": "Обновление медиа канала Special"
-})
-<link rel="stylesheet" href="/css/page.css">
+{% extends "post.html" %}
 
-<body>
+{% block content %}
 
-    <main id="post--main" class="post--font-size main--post">
+<h1>Обновление медиа канала Special</h1>
 
-        <div class="post--bg-image" style="background-image: url('/img/updates/code01.jpg')">
-
-            <div class="post--bg-image-block">
-
-                @@include('../../../parts/header-post.html', {
-                    "color": "#fff"
-                })
-
-                <div class="post--bg-content">
-                    <div>
-                        <h1 class="head--static-font">Обновление<br> медиа канала<br> Special</h1>
-                        <p class="post--start-p subhead--static-font">Улучшение дизайна.<br> Многоязычность.<br> Доступность.</p>
-                    </div>
-                    <div class="post--bg-image-top">
-                        <a href="#read" class="btn btn-outline-light btn-lg post-button-rounded fs-4 px-3 pe-4 border-2">
-                            <span class="d-flex align-items-center text-white">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="me-3"
-                                    viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
-                                </svg>
-                                Читать
-                            </span>
-                        </button>
-                    </div>
-                    <div class="post--bg-image-bottom">
-                        <div class="d-flex flex-wrap">
-                            <div class="text-white me-4">
-                                <a href="/author/daniildybka" class="link-white">
-                                    Даниил Дыбка
-                                </a>
-                            </div>
-                            <div class="text-white">
-                                <a data-bs-toggle="collapse" href="#mediashare" role="button" aria-expanded="false"
-                                    aria-controls="mediashare" class="link-white">
-                                    Поделиться
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-
-            <div id="mediashare" class="mb-4 container--post collapse">
-                <div style="max-width: 400px">
-                    <h2>Поделиться статьей</h2>
-                    <div class="list-group list-group-flush">
-                        <button onClick="CopyLink()" type="button" class="list-group-item list-group-item-action">
-                            Скопировать ссылку
-                        </button>
-                        <button onClick="LinkToTelegram()" type="button" class="list-group-item list-group-item-action">
-                            Телеграм
-                        </button>
-                        <button onClick="LinkToVK()" type="button" class="list-group-item list-group-item-action">
-                            Вконтакте
-                        </button>
-                        <button onClick="LinkToOK()" type="button" class="list-group-item list-group-item-action">
-                            Одноклассники
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            @@include('../../../parts/p--font-size.html', {
-                "left": "true"
-            })
-
-            <div class="container--post">
-
-                <p class="mb-0 visually-hidden" id="read">Перейти к чтению</p>
-
-                <p>
-                    16 апреля на сайте медиа Special было выпущено крупное обновление с массовыми изменениями.
-                    Давайте подробнее поговорим про обновление.
-                </p>
-
-                <h3>Многоязычность сайта</h3>
-
-                <p>
-                    Теперь медиа Special поддерживает многоязычность. Это означает, что пользователи с разных стран
-                    могут создавать контент друг для друга на удобной площадке.
-                </p>
-
-                <p>
-                    Страницы с переводом представляют собой отдельную часть сайта. Стили и прочие элементы
-                    загружаются с основного домена, что обеспечивает быструю скорость загрузки и 100%
-                    получение содержимого пользователями.
-                </p>
-
-                <h3>Цветной фон</h3>
-
-                <p>
-                    Фон на сайте теперь представляет собой цвет в зависимости от темы: черный или белый.
-                    Ранее использовалась уникальная картинка, что негативно влияло на доступность содержимого,
-                    загрузку страниц.
-                </p>
-
-                <p>
-                    Отказ от уникального фона повлечет за собой прирост скорости. Вместе с тем, для лиц с ограниченными
-                    возможностями здоровья читать статьи будет приятнее из-за отсутствия ряби в глазах.
-                </p>
-
-                <h3>Новый формат страницы записи</h3>
-
-                <p>
-                    Страница записи имеет новый дизайн: используется дизайн стекла на сайте,
-                    изображение записи стало фоновым, содержимое отделилось от названия,
-                    добавлено большое удобств.
-                </p>
-
-                <p>
-                    Записи, написанные до 17 апреля 2023 года будут также доступны в старом дизайне.
-                    Новые страницы станут появляться с обновленным дизайном страницы.
-                </p>
-
-                <p>
-                    Смотрите все изменения на медиа Special: <a href="//news.dybka.ru" class="link">news.dybka.ru</a>.
-                </p>
-
-            </div>
+<img src="cap.jpg" alt="Наушники Apple AirPods Pro 1 поколения на черном фоне">
 
 
-                <p class="post--main-more">Автор:
-                    <a href="/author/daniildybka" class="link">Даниил Дыбка</a>
-                </p>
-                <p class="post--main-more">17.04.23 12:00</p>
-            </div>
+<p>
+16 апреля на сайте медиа Special было выпущено крупное обновление с массовыми изменениями.
+Давайте подробнее поговорим про обновление.
+</p>
 
-            @@include('../../../parts/p--more-post.html', {
-                "active": "p-how-did-i-start-learning-programming"
-            })
-        </div>
+<h3>Многоязычность сайта</h3>
 
-    </main>
+<p>
+Теперь медиа Special поддерживает многоязычность. Это означает, что пользователи с разных стран
+могут создавать контент друг для друга на удобной площадке.
+</p>
 
-    <script src="/js/post.js"></script>
-    @@include('../../../parts/footer.html', {
+<p>
+Страницы с переводом представляют собой отдельную часть сайта. Стили и прочие элементы
+загружаются с основного домена, что обеспечивает быструю скорость загрузки и 100%
+получение содержимого пользователями.
+</p>
 
-    })
-</body>
+<h3>Цветной фон</h3>
 
-</html>
+<p>
+Фон на сайте теперь представляет собой цвет в зависимости от темы: черный или белый.
+Ранее использовалась уникальная картинка, что негативно влияло на доступность содержимого,
+загрузку страниц.
+</p>
+
+<p>
+Отказ от уникального фона повлечет за собой прирост скорости. Вместе с тем, для лиц с ограниченными
+возможностями здоровья читать статьи будет приятнее из-за отсутствия ряби в глазах.
+</p>
+
+<h3>Новый формат страницы записи</h3>
+
+<p>
+Страница записи имеет новый дизайн: используется дизайн стекла на сайте,
+изображение записи стало фоновым, содержимое отделилось от названия,
+добавлено большое удобств.
+</p>
+
+<p>
+Записи, написанные до 17 апреля 2023 года будут также доступны в старом дизайне.
+Новые страницы станут появляться с обновленным дизайном страницы.
+</p>
+
+<p>
+Смотрите все изменения на медиа Special: <a href="//news.dybka.ru" class="link">news.dybka.ru</a>.
+</p>
+
+
+<p class="post--main-more">17.04.23 12:00</p>
+
+{% endblock %}
