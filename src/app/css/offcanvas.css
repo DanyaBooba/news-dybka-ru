@@ -1,11 +1,12 @@
 .offcanvas
 {
-    background: var(--bg-color-rgba-3);
-    backdrop-filter: blur(15px);
+    background: var(--bg-color);
+    /* background: var(--bg-color-rgba-3); */
+    /* backdrop-filter: blur(15px); */
 }
 
 .offcanvas .offcanvas-body .offcanvas--item {
-    background: var(--text-color-6);
+    background: var(--text-color-7);
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 2rem;

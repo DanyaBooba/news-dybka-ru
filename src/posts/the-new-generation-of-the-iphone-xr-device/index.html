@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-@@include('../../../parts/head.html', {
-"title": "Новое поколение устройства — iPhone XR"
-})
-<link rel="stylesheet" href="/css/page.css">
+{% extends "post.html" %}
 
-<body>
-    @@include('../../../parts/header.html', {
+{% block content %}
 
-    })
-
-    <main id="post--main" class="container post--font-size main--post">
-
-        @@include('../../../parts/p--font-size.html', {
-
-        })
-
-        <div class="container--post-head ">
             <h1>Новое поколение устройства — iPhone XR</h1>
-            <p class="post--start-p">История, как полюбил iPhone XR</p>
-        </div>
 
-        <figure class="post--start-img text-center">
-            <img src="/img/posts/p007.jpg" class="img-fluid w-100" alt="Телефон лежит на столе">
-            <figcaption class="img--desc">Телефон лежит на столе</figcaption>
-        </figure>
+            <img src="cap.jpg" alt="Наушники Apple AirPods Pro 1 поколения на черном фоне">
 
-        <div class="container--post">
             <p>
                 Мне всегда было интересно опробовать новое устройство от Apple и мой выбор пал именно на iPhone XR в связи с его
                 популярностью и удобством.
@@ -90,25 +69,10 @@
             <p>
                 В заключение хочу порекомендовать телефон к покупке. До встречи!
             </p>
-        </div>
 
 
-            <p class="post--main-more">Автор:
-                <a href="/author/daniildybka" class="link">Даниил Дыбка</a>
-            </p>
+
+
             <p class="post--main-more">06.02.23 12:00</p>
-        </div>
 
-        @@include('../../../parts/p--more-post.html', {
-        "active": "p-the-new-generation-of-the-iphone-xr-device"
-        })
-
-    </main>
-
-    <script src="/js/post.js"></script>
-    @@include('../../../parts/footer.html', {
-
-    })
-</body>
-
-</html>
+            {% endblock %}

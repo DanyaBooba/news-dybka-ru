@@ -26,8 +26,9 @@
 }
 
 .canvas-bg {
-    background-color: var(--bg-color-rgba);
-    backdrop-filter: blur(45px);
+    background: var(--bg-color);
+    /* background-color: var(--bg-color-rgba); */
+    /* backdrop-filter: blur(45px); */
 }
 
 .header--mobile-last-item {
