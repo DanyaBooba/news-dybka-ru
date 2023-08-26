@@ -49,6 +49,7 @@
 .post--main ul li,
 .post--main ol li {
     padding-left: 8px;
+    padding-bottom: 5px;
 }
 
 .post--main ul li::marker,

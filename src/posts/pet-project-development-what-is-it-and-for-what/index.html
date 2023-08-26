@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-@@include('../../../parts/head.html', {
-"title": "Разработка pet-проектов — что это и для чего?"
-})
-<link rel="stylesheet" href="/css/page.css">
+{% extends "post.html" %}
 
-<body>
-    @@include('../../../parts/header.html', {
+{% block content %}
 
-    })
-
-    <main id="post--main" class="container post--font-size main--post">
-
-        @@include('../../../parts/p--font-size.html', {
-
-        })
-
-        <div class="container--post-head ">
             <h1>Разработка pet-проектов — что это и для чего?</h1>
-            <p class="post--start-p">Постараемся разобраться в сегодняшней статье.</p>
-        </div>
 
-        <figure class="post--start-img text-center">
-            <img src="/img/posts/p010.jpg" class="img-fluid w-100" alt="Открытый код программы">
-            <figcaption class="img--desc">Открытый код программы</figcaption>
-        </figure>
+            <img src="cap.jpg" alt="Наушники Apple AirPods Pro 1 поколения на черном фоне">
 
-        <div class="container--post">
             <p>
                 Стоит разобраться с самого начала, что такое pet-проект и проект в целом. Проект - это твоя придуманная идея,
                 реализуемая технически. Если говорить более простым языком, под проектом понимается какое-то решение, какое-то
@@ -59,25 +38,10 @@
             <p>
                 В заключение хотел бы пожелать удачи в ведении pet-проектов!
             </p>
-        </div>
 
 
-            <p class="post--main-more">Автор:
-                <a href="/author/daniildybka" class="link">Даниил Дыбка</a>
-            </p>
+
+
             <p class="post--main-more">06.02.23 12:00</p>
-        </div>
 
-        @@include('../../../parts/p--more-post.html', {
-        "active": "p-pet-project-development-what-is-it-and-for-what"
-        })
-
-    </main>
-
-    <script src="/js/post.js"></script>
-    @@include('../../../parts/footer.html', {
-
-    })
-</body>
-
-</html>
+            {% endblock %}
