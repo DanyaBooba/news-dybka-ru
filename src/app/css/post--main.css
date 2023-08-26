@@ -40,15 +40,18 @@
     height: auto;
 }
 
-.post--main ul {
+.post--main ul,
+.post--main ol {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.post--main ul li {
+.post--main ul li,
+.post--main ol li {
     padding-left: 8px;
 }
 
-.post--main ul li::marker {
+.post--main ul li::marker,
+.post--main ol li::marker {
     color: var(--text-color-4) !important;
 }
