@@ -39,3 +39,16 @@
     max-width: 100%;
     height: auto;
 }
+
+.post--main ul {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.post--main ul li {
+    padding-left: 8px;
+}
+
+.post--main ul li::marker {
+    color: var(--text-color-4) !important;
+}
