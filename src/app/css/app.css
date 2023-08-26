@@ -144,3 +144,11 @@ h6,
 .post--block h2 {
     margin-bottom: 10px;
 }
+
+svg.icon {
+    fill: var(--text-default) !important;
+}
+
+hr {
+    margin-bottom: 30px;
+}

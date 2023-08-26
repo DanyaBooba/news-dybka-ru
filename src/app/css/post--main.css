@@ -1,8 +1,8 @@
-.post--main
+/* .post--main
 {
     max-width: 800px;
     padding-left: 100px;
-}
+} */
 
 .post--main .post--main-more {
     font-size: 20px;
@@ -36,11 +36,4 @@
 
     max-width: 100%;
     height: auto;
-}
-
-@media(max-width: 991px) {
-    .post--main {
-        max-width: 800px;
-        padding-left: 0 !important;
-    }
 }

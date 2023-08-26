@@ -1,0 +1,14 @@
+.post--share .post--share-item {
+    margin-bottom: 20px;
+}
+
+.post--share .post--share-item svg {
+    fill: var(--text-color-4);
+    width: 48px;
+    height: 48px;
+    transition: .3s;
+}
+
+.post--share .post--share-item svg:hover {
+    fill: var(--text-default);
+}
