@@ -33,6 +33,11 @@
     font-family: HalvarBreit;
 }
 
+.card--title-mini {
+    font-size: 1rem;
+    margin-bottom: 0px !important;
+}
+
 .card--title-1-padding {
     margin-left: 20px !important;
     margin-right: 20px !important;
