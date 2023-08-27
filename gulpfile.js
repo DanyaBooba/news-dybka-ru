@@ -12,25 +12,6 @@ const sync = require("browser-sync");
 //
 
 function njk() {
-	// 	.pipe(gulp.src("src/games/**/*.html"))
-	// 	.pipe(nunjucks.compile())
-	// 	.pipe(gulp.dest("dist/games"))
-	// 	.pipe(gulp.src("src/news/**/*.html"))
-	// 	.pipe(nunjucks.compile())
-	// 	.pipe(gulp.dest("dist/news"))
-	// 	.pipe(gulp.src("src/updates/**/*.html"))
-	// 	.pipe(nunjucks.compile())
-	// 	.pipe(gulp.dest("dist/updates"))
-	// 	.pipe(gulp.src("src/about/**/*.html"))
-	// 	.pipe(nunjucks.compile())
-	// 	.pipe(gulp.dest("dist/about"))
-	// 	.pipe(gulp.src("src/more/**/*.html"))
-	// 	.pipe(nunjucks.compile())
-	// 	.pipe(gulp.dest("dist/more"))
-	// 	.pipe(gulp.src("src/tech/**/*.html"))
-	// 	.pipe(nunjucks.compile())
-	// 	.pipe(gulp.dest("dist/tech"));
-
 	return gulp
 		.src(["src/*.html", "src/posts/**/*.html"])
 		.pipe(
@@ -86,18 +67,22 @@ function fonts() {
 //
 
 function images() {
+	return gulp.src("src/app/img/**/*").pipe(gulp.dest("dist/img"));
+}
+
+//
+// Post Image
+//
+
+function imagesPost() {
 	return gulp
-		.src("src/app/img/**/*")
-		.pipe(gulp.dest("dist/img"))
-		.pipe(
-			gulp.src([
-				"src/posts/**/*.jpg",
-				"src/posts/**/*.png",
-				"src/posts/**/*.jfif",
-				"src/posts/**/*.webp",
-				"src/posts/**/*.jpeg",
-			])
-		)
+		.src([
+			"src/posts/**/*.jpg",
+			"src/posts/**/*.png",
+			"src/posts/**/*.jfif",
+			"src/posts/**/*.webp",
+			"src/posts/**/*.jpeg",
+		])
 		.pipe(gulp.dest("dist"));
 }
 
