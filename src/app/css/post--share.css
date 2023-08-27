@@ -4,11 +4,20 @@
 
 .post--share .post--share-item svg {
     fill: var(--text-color-4);
-    width: 48px;
-    height: 48px;
     transition: .3s;
 }
 
 .post--share .post--share-item svg:hover {
     fill: var(--text-default);
+}
+
+.post--share .post--share-item img {
+    filter: grayscale(100%);
+    opacity: .3;
+    transition: .3s;
+}
+
+.post--share .post--share-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
 }
