@@ -118,7 +118,7 @@ function watch() {
 	gulp.watch("src/**/*.js", js);
 	gulp.watch(
 		["src/app/more/**/*", "src/app/fonts/**/*", "src/app/img/**/*"],
-		gulp.parallel(folder, fonts, images)
+		gulp.parallel(folder, fonts, images, imagesPost)
 	);
 }
 
@@ -127,6 +127,6 @@ function watch() {
 //
 
 exports.default = gulp.series(
-	gulp.parallel(njk, css, js, fonts, folder, images),
+	gulp.parallel(njk, css, js, fonts, folder, images, imagesPost),
 	gulp.parallel(watch, server)
 );
