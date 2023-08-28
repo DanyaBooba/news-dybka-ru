@@ -1,0 +1,14 @@
+{
+  "name": "Special — медиасообщество о программировании",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "browser",
+  "orientation": "any",
+  "background_color": "white",
+  "description": "Special — медиасообщество о программировании",
+  "icon": {
+    "src": "/img/logo/favicon.ico",
+    "sizes": "256x256",
+    "type": "image/x-icon"
+  }
+}
