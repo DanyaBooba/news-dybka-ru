@@ -17,6 +17,54 @@ var pages = [
 		url: "sweetness",
 		alt: "Шапка игры Sweetness",
 	},
+	{
+		name: "Название поста",
+		class: "Игры",
+		url: "sweetness",
+		alt: "Шапка игры Sweetness",
+	},
+	{
+		name: "Название поста",
+		class: "Игры",
+		url: "sweetness",
+		alt: "Шапка игры Sweetness",
+	},
+	{
+		name: "Название поста",
+		class: "Игры",
+		url: "sweetness",
+		alt: "Шапка игры Sweetness",
+	},
+	{
+		name: "Название поста",
+		class: "Игры",
+		url: "sweetness",
+		alt: "Шапка игры Sweetness",
+	},
+	{
+		name: "Название поста",
+		class: "Игры",
+		url: "sweetness",
+		alt: "Шапка игры Sweetness",
+	},
+	{
+		name: "Название поста",
+		class: "Игры",
+		url: "sweetness",
+		alt: "Шапка игры Sweetness",
+	},
+	{
+		name: "Название поста",
+		class: "Игры",
+		url: "sweetness",
+		alt: "Шапка игры Sweetness",
+	},
+	{
+		name: "Название поста",
+		class: "Игры",
+		url: "sweetness",
+		alt: "Шапка игры Sweetness",
+	},
 ];
 
 function AddPost() {
@@ -24,9 +72,7 @@ function AddPost() {
 
 	if (content == null) return;
 
-	var count_items = 3;
-
-	if (count_items > pages.length) count_items = pages.length;
+	var count_items = CountItems();
 
 	for (var i = 0; i < count_items; i++) {
 		var index = 0;
@@ -64,6 +110,22 @@ function AddPost() {
 
 		content.insertAdjacentHTML("beforeend", htmlblock);
 	}
+}
+
+function CountItems() {
+	var content = document.getElementById("post--main");
+
+	var len = content.innerHTML.length;
+
+	var count = parseInt(len / 1000 - 1);
+
+	if (count < 0) count = 0;
+
+	if (count > pages.length) count = pages.length;
+
+	if (count > 3) count = 3;
+
+	return count;
 }
 
 AddPost();
