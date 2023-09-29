@@ -140,6 +140,10 @@ var pages = [
 ];
 
 function AddPost() {
+	var isarchive = document.getElementById("archivetrue") !== undefined;
+
+	if (isarchive) return;
+
 	var content = document.getElementById("post--right");
 
 	var name = document.getElementsByTagName("H1")[0].textContent;
