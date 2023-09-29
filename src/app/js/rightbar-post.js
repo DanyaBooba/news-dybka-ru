@@ -142,46 +142,37 @@ var pages = [
 function AddPost() {
 	var content = document.getElementById("post--right");
 
+	var name = document.getElementsByTagName("H1")[0].textContent;
+
 	if (content == null) return;
 
 	var count_items = CountItems();
 
-	for (var i = 0; i < count_items; i++) {
+	var cont = true;
+	var contid = 0;
+
+	while (cont) {
+		if (pages.length <= 0 || contid >= count_items) {
+			cont = false;
+			break;
+		}
+
 		var index = GetIndex();
 
 		var block = pages[index];
 
 		pages.splice(index, 1);
 
-		var htmlblock =
-			`<div class="col pb-3 mb-sm-0">
-            <a href="/` +
-			block["url"] +
-			`/" class="card card--link card--rounded border-0">
-                <img src="/` +
-			block["url"] +
-			`/cap.jpg" class="card-img" alt="` +
-			block["alt"] +
-			`">
-                <div class="card-img-overlay card--bg-gradient d-flex">
-                    <div class="d-flex mt-auto flex-column">
-                        <p class="card-subtitle">
-                            ` +
-			block["class"] +
-			`
-                        </p>
-                        <p class="card-title text-white card--title card--title-mini">
-                            ` +
-			block["name"] +
-			`
-                        </p>
-                    </div>
-                </div>
-            </a>
-            </div>`;
+		if (name === block["name"]) continue;
+
+		var htmlblock = HTMLBlock(block);
+
+		contid += 1;
 
 		content.insertAdjacentHTML("beforeend", htmlblock);
 	}
+
+	for (var i = 0; i < count_items; i++) {}
 }
 
 function CountItems() {
@@ -206,6 +197,36 @@ function GetIndex() {
 
 function randomInteger(max) {
 	return Math.floor(Math.random() * (max - 1));
+}
+
+function HTMLBlock(block) {
+	return (
+		`<div class="col pb-3 mb-sm-0">
+            <a href="/` +
+		block["url"] +
+		`/" class="card card--link card--rounded border-0">
+                <img src="/` +
+		block["url"] +
+		`/cap.jpg" class="card-img" alt="` +
+		block["alt"] +
+		`">
+                <div class="card-img-overlay card--bg-gradient d-flex">
+                    <div class="d-flex mt-auto flex-column">
+                        <p class="card-subtitle">
+                            ` +
+		block["class"] +
+		`
+                        </p>
+                        <p class="card-title text-white card--title card--title-mini">
+                            ` +
+		block["name"] +
+		`
+                        </p>
+                    </div>
+                </div>
+            </a>
+            </div>`
+	);
 }
 
 AddPost();
