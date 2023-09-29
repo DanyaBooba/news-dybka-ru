@@ -38,6 +38,8 @@
 
     max-width: 100%;
     height: auto;
+
+    box-shadow: 0 .125rem .25rem rgba(var(--bs-body-color-rgb), .075) !important;
 }
 
 .post--main ul,
