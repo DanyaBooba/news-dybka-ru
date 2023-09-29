@@ -10,23 +10,21 @@
     padding-bottom: 3px;
 }
 
-/* .nav-link-padding
-{
-    padding-left: 1rem;
-    padding-right: 1rem;
-} */
-
 .header--nav-link {
     padding: 1rem !important;
     margin-left: 5px !important;
     margin-right: 5px !important;
     color: var(--text-default) !important;
+
+    transition: .3s;
 }
 
 .header--nav-link:hover,
 .header--nav-link:focus {
     background: var(--bg-color);
     color: var(--text-default) !important;
+
+    transform: scale(1.2);
 }
 
 .header--nav-button-in {
