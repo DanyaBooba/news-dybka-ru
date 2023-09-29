@@ -15,10 +15,9 @@
 }
 
 @font-face {
-    font-family: HalvarBreit;
+    font-family: Unbounded;
     font-style: bold;
-    src: url("/fonts/HalvarBreit/HalvarBreit.woff") format("woff"),
-        url("/fonts/HalvarBreit/HalvarBreit.woff2") format("woff2");
+    src: url("/fonts/Unbounded/Unbounded-Regular.woff2");
 }
 
 /* Set */
@@ -50,7 +49,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: HalvarBreit;
+    font-family: Unbounded;
 }
 
 h1 b,
@@ -77,5 +76,5 @@ h6 nobr,
 .h5 nobr,
 .h6 b,
 .h6 nobr {
-    font-family: HalvarBreit;
+    font-family: Unbounded;
 }

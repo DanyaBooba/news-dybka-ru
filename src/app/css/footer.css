@@ -8,16 +8,30 @@
     color: var(--text-color-2);
 }
 
+.footer--main ul,
+.footer--main ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer--main .footer--text-li {
+    margin-bottom: 10px;
+}
+
 .footer--main .footer--text-link
 {
     padding-left: 0px;
-    color: var(--text-color-2);
+    color: var(--text-default);
+
+    border-bottom: 1px solid var(--text-color-4);
+    text-decoration: none;
+
     transition: .3s;
 }
 
 .footer--main .footer--text-link:hover,
 .footer--main .footer--text-link:focus {
-    color: var(--text-default);
+    border-bottom: 1px solid var(--text-default);
 }
 
 .footer--main .footer--block-copyright

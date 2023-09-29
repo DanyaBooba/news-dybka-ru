@@ -1,0 +1,19 @@
+.post--block ul li::marker {
+    color: var(--text-color-4) !important;
+}
+
+.post--block ul li {
+    padding-left: 8px;
+    padding-bottom: 5px;
+}
+
+.post--block ul li a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-color-4);
+    transition: .3s;
+}
+
+.post--block ul li a:hover,
+.post--block ul li a:focus {
+    border-bottom: 1px solid var(--text-default);
+}
