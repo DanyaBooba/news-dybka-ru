@@ -197,7 +197,7 @@ function RightHTML(block) {
 		`/" class="card card--link card--rounded border-0">
                 <img src="/` +
 		block["url"] +
-		`/cap.jpg" class="card-img" alt="` +
+		`/cap@min.jpg" class="card-img" alt="` +
 		block["alt"] +
 		`">
                 <div class="card-img-overlay card--bg-gradient d-flex">
