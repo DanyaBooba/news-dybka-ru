@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /css/
-Disallow: /download/
 Disallow: /fonts/
 Disallow: /img/
 Disallow: /js/
