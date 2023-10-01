@@ -140,9 +140,7 @@ var pages = [
 ];
 
 function AddPost() {
-	var isarchive = document.getElementById("archivetrue") !== undefined;
-
-	if (isarchive) return;
+	if (document.getElementById("archivetrue") !== null) return;
 
 	var content = document.getElementById("post--right");
 
@@ -150,18 +148,16 @@ function AddPost() {
 
 	if (content == null) return;
 
-	var count_items = CountItems();
-
 	var cont = true;
 	var contid = 0;
 
 	while (cont) {
-		if (pages.length <= 0 || contid >= count_items) {
+		if (pages.length <= 0 || contid >= RightCountItems()) {
 			cont = false;
 			break;
 		}
 
-		var index = GetIndex();
+		var index = RandomInteger(pages.length);
 
 		var block = pages[index];
 
@@ -169,20 +165,14 @@ function AddPost() {
 
 		if (name === block["name"]) continue;
 
-		var htmlblock = HTMLBlock(block);
-
 		contid += 1;
 
-		content.insertAdjacentHTML("beforeend", htmlblock);
+		content.insertAdjacentHTML("beforeend", RightHTML(block));
 	}
-
-	for (var i = 0; i < count_items; i++) {}
 }
 
-function CountItems() {
-	var content = document.getElementById("post--main");
-
-	var len = content.innerHTML.length;
+function RightCountItems() {
+	var len = document.getElementById("post--main").innerHTML.length;
 
 	var count = parseInt(len / 1000 - 1);
 
@@ -195,15 +185,11 @@ function CountItems() {
 	return count;
 }
 
-function GetIndex() {
-	return randomInteger(pages.length);
-}
-
-function randomInteger(max) {
+function RandomInteger(max) {
 	return Math.floor(Math.random() * (max - 1));
 }
 
-function HTMLBlock(block) {
+function RightHTML(block) {
 	return (
 		`<div class="col pb-3 mb-sm-0">
             <a href="/` +

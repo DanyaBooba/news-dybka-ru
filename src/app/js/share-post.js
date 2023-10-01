@@ -21,8 +21,7 @@ function ShareOK() {
 }
 
 function ShareLink() {
-	let text = SpecialURL();
-	navigator.clipboard.writeText(text);
+	navigator.clipboard.writeText(SpecialURL());
 }
 
 function SpecialURL() {
