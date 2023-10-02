@@ -1,8 +1,7 @@
-/* .post--main
+.post--main
 {
-    max-width: 800px;
-    padding-left: 100px;
-} */
+    word-break: break-word !important;
+}
 
 .post--main .post--main-more {
     font-size: 20px;
@@ -57,4 +56,17 @@
 .post--main ul li::marker,
 .post--main ol li::marker {
     color: var(--text-color-4) !important;
+}
+
+.post--main a {
+    text-decoration: none;
+    color: var(--text-default);
+
+    border-bottom: 1px solid var(--text-color-4);
+    transition: .3s;
+}
+
+.post--main a:hover,
+.post--main a:focus {
+    border-bottom: 1px solid var(--text-default);
 }
