@@ -1,9 +1,9 @@
-/* .theme-toggle
+.theme-toggle
 {
     margin-top: 10px;
     width: 195px;
     background: var(--bg-theme-color);
-    border-radius: var(--border-radius-3);
+    border-radius: 20px;
     padding: 1.5px;
 }
 
@@ -50,4 +50,4 @@
     color: var(--text-default) !important;
     background: var(--bg-color);
     border: 0;
-} */
+}
