@@ -1,23 +1,39 @@
 /* Up 1 */
 
-.post--main.uptext-1 {
-    background: #000 !important;
+.post--main.uptext-1 h1 {
+    font-size: 55px;
+}
+
+.post--main.uptext-1 h2 {
+    font-size: 45px;
 }
 
 /* Up 2 */
 
-.post--main.uptext-2 {
-    background: #000 !important;
+.post--main.uptext-2 h1 {
+    font-size: 60px;
+}
+
+.post--main.uptext-2 h2 {
+    font-size: 50px;
 }
 
 /* Down 1 */
 
-.post--main.downtext-1 {
-    background: #000 !important;
+.post--main.downtext-1 h1 {
+    font-size: 45px;
+}
+
+.post--main.downtext-1 h2 {
+    font-size: 35px;
 }
 
 /* Down 2 */
 
-.post--main.downtext-2 {
-    background: #000 !important;
+.post--main.downtext-2 h1 {
+    font-size: 40px;
+}
+
+.post--main.downtext-2 h2 {
+    font-size: 30px;
 }
