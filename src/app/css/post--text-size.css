@@ -37,3 +37,7 @@
 .post--main.downtext-2 h3 { font-size: 25px; }
 
 .post--main.downtext-2 p { font-size: 17px; }
+
+@media(max-width: 471px) {
+
+}
