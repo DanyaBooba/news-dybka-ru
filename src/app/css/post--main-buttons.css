@@ -18,3 +18,7 @@
 .post--main-buttons button:focus {
     border: 2px solid #123;
 }
+
+.post--main-buttons button svg {
+    margin-left: 3px;
+}
