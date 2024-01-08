@@ -191,7 +191,7 @@ function RandomInteger(max) {
 
 function RightHTML(block) {
 	return (
-		`<div class="col pb-3 mb-sm-0">
+		`<div class="col post">
             <a href="/` +
 		block["url"] +
 		`/" class="card card--link card--rounded border-0">

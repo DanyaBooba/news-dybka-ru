@@ -2,26 +2,39 @@ function ChangeSize(value) {
 	let content = document.getElementById("post--main");
 	let btndefault = document.getElementById("textsizetodefault");
 
-	if (btndefault !== null) btndefault.classList.remove("d-none");
-
 	if (content === null) return;
+
 	ClearChangeSize(content);
 
-	if (value == 0) {
-		if (btndefault !== null) btndefault.classList.add("d-none");
-	} else if (value == -1) {
-		content.classList.add("downtext-1");
-	} else if (value == -2) {
-		content.classList.add("downtext-2");
-	} else if (value == 1) {
-		content.classList.add("uptext-1");
-	} else if (value == 2) {
-		content.classList.add("uptext-2");
+	switch (value) {
+		case 0:
+			btndefault !== null ? btndefault.classList.add("d-none") : null;
+			break;
+
+		case 1:
+			content.classList.add("uptext-2");
+			break;
+
+		case 2:
+			content.classList.add("uptext-1");
+			break;
+
+		case -1:
+			content.classList.add("downtext-1");
+			break;
+
+		case -2:
+			content.classList.add("downtext-2");
+			break;
 	}
+
+	btndefault !== null ? btndefault.classList.remove("d-none") : null;
 }
 
 function TextDown() {
 	var value = localStorage.getItem("textsize");
+
+	console.log(value);
 
 	if (value === null) value = -1;
 

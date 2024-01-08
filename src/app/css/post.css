@@ -1,3 +1,11 @@
+.row {
+    --bs-gutter-x: .7rem !important;
+}
+
+.post {
+    padding-bottom: .7rem;
+}
+
 .post--font-size
 {
     font-size: 1.25rem !important;

@@ -1,3 +1,36 @@
-.post--right .col {
-    /* margin-top: 1000px; */
+@media(min-width: 992px) {
+    main .row .col-md-8 {
+        width: 71% !important;
+    }
+
+    main .row .col-md-1 {
+        width: 4% !important;
+    }
+
+    main .row .col-md-1 .d-flex {
+        flex-direction: column;
+    }
+
+    .post--right {
+        margin-top: 97px;
+    }
+}
+
+@media(max-width: 991px) {
+    main .row .col-md-1 .d-flex .d-flex {
+        margin-right: 23px;
+    }
+
+    main .row .col-md-8 {
+        width: 100%;
+    }
+
+    main .row .col-md-3 {
+        width: 100%;
+    }
+
+    .post--right .col a .d-flex .d-flex p.card--title-mini {
+        font-size: 1.5rem !important;
+        margin-bottom: 5px !important;
+    }
 }
