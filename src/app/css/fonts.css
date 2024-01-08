@@ -17,7 +17,8 @@
 @font-face {
     font-family: Unbounded;
     font-style: bold;
-    src: url("/fonts/Unbounded/Unbounded-Regular.woff2");
+    src: url("/fonts/HalvarBreit/HalvarBreit.woff") format("woff"),
+        url("/fonts/HalvarBreit/HalvarBreit.woff2") format("woff2");
 }
 
 /* Set */
