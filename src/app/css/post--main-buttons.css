@@ -16,7 +16,7 @@
 }
 
 .post--main-buttons button:focus {
-    border: 2px solid #123;
+    border: 2px solid var(--text-color-2);
 }
 
 .post--main-buttons button svg {

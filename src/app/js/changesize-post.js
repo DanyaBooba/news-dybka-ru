@@ -2,21 +2,29 @@ function ChangeSize(value) {
 	let content = document.getElementById("post--main");
 	let btndefault = document.getElementById("textsizetodefault");
 
-	if (content === null) return;
+	let btndiff = document.getElementById("textsizediff");
+	let btnup = document.getElementById("textsizeup");
+
+	if (!content) return;
+
+	if (btndefault) btndefault.classList.remove("d-none");
+	if (btnup) btnup.removeAttribute("disabled");
+	if (btndiff) btndiff.removeAttribute("disabled");
 
 	ClearChangeSize(content);
 
-	switch (value) {
+	switch (Number(value)) {
 		case 0:
-			btndefault !== null ? btndefault.classList.add("d-none") : null;
+			if (btndefault !== null) btndefault.classList.add("d-none");
 			break;
 
 		case 1:
-			content.classList.add("uptext-2");
+			content.classList.add("uptext-1");
 			break;
 
 		case 2:
-			content.classList.add("uptext-1");
+			btnup.setAttribute("disabled", "");
+			content.classList.add("uptext-2");
 			break;
 
 		case -1:
@@ -24,43 +32,36 @@ function ChangeSize(value) {
 			break;
 
 		case -2:
+			btndiff.setAttribute("disabled", "");
 			content.classList.add("downtext-2");
 			break;
-	}
 
-	btndefault !== null ? btndefault.classList.remove("d-none") : null;
+		default:
+			console.log("value: " + value);
+			break;
+	}
 }
 
 function TextDown() {
-	var value = localStorage.getItem("textsize");
+	var value = Number(
+		localStorage.getItem("textsize") ? localStorage.getItem("textsize") : 0
+	);
 
-	console.log(value);
+	value = Math.max(-2, value - 1);
 
-	if (value === null) value = -1;
-
-	if (value < -2 || value > 2) value = 0;
-
-	if (value > -2) value -= 1;
-
-	localStorage.setItem("textsize", value);
-
-	console.log(value);
+	localStorage.setItem("textsize", Number(value));
 
 	ChangeSize(value);
 }
 
 function TextUp() {
-	var value = localStorage.getItem("textsize");
+	var value = Number(
+		localStorage.getItem("textsize") ? localStorage.getItem("textsize") : 0
+	);
 
-	if (value === null) value = 1;
+	value = Math.min(2, value + 1);
 
-	if (value < -2 || value > 2) value = 0;
-
-	if (value < 2) value++;
-
-	localStorage.setItem("textsize", value);
-
-	console.log(value);
+	localStorage.setItem("textsize", Number(value));
 
 	ChangeSize(value);
 }
@@ -68,16 +69,13 @@ function TextUp() {
 function TextDefault() {
 	localStorage.setItem("textsize", 0);
 
-	console.log(0);
-
 	ChangeSize(0);
 }
 
 function ClearChangeSize(content) {
-	content.classList.remove("uptext-1");
-	content.classList.remove("uptext-2");
-	content.classList.remove("downtext-1");
-	content.classList.remove("downtext-2");
+	["uptext-1", "uptext-2", "downtext-1", "downtext-2"].forEach((el) =>
+		content.classList.remove(el)
+	);
 }
 
 ChangeSize(

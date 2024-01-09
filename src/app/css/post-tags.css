@@ -1,0 +1,22 @@
+.post-tags
+{
+    margin-bottom: 5px;
+}
+
+.post-tags button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    background: var(--text-color-7);
+    padding: 6px 20px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.post-tags button:hover {
+    background: var(--text-color-8);
+}

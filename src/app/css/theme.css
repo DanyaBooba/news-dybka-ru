@@ -1,10 +1,14 @@
-.theme-toggle
-{
-    margin-top: 10px;
+.theme-toggle {
     width: 195px;
     background: var(--bg-theme-color);
-    border-radius: 20px;
+    border-radius: 100px;
     padding: 1.5px;
+}
+
+@media(max-width: 260px) {
+    .theme-toggle {
+        display: none !important;
+    }
 }
 
 .theme-toggle .btn-secondary {
@@ -41,12 +45,11 @@
     border: 0;
 }
 
-.btn-check:checked+.btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check)+.btn:active
-{
+.btn-check:checked+.btn-secondary,
+.theme-toggle .btn-secondary.active,
+.theme-toggle .btn-secondary.show,
+.theme-toggle .btn-secondary:first-child:active,
+:not(.btn-check)+.theme-toggle .btn-secondary:active {
     color: var(--text-default) !important;
     background: var(--bg-color);
     border: 0;
