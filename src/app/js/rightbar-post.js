@@ -30,6 +30,42 @@ var pages = [
 		alt: "Шапка игры Камень Ножницы Бумага",
 	},
 	{
+		name: "Пиратки на макбуке",
+		class: "Техника",
+		url: "pirates-on-the-macbook",
+		alt: "Пиратки на макбуке",
+	},
+	{
+		name: "Почему я решил перейти на iPad mini 5?",
+		class: "Техника",
+		url: "why-did-i-decide-to-upgrade-to-the-ipad-mini-5",
+		alt: "Макбук 2017 года на столе",
+	},
+	{
+		name: "Программирование на Айпаде",
+		class: "Техника",
+		url: "programming-on-ipad-mini-5",
+		alt: "Программирование на Айпаде",
+	},
+	{
+		name: "Копия или оригинал",
+		class: "Техника",
+		url: "copy-or-original-which-to-choose",
+		alt: "Копия или оригинал",
+	},
+	{
+		name: "Макбук М1",
+		class: "Техника",
+		url: "macbook-m1",
+		alt: "Макбук М1",
+	},
+	{
+		name: "Обзор на iPad mini 5",
+		class: "Техника",
+		url: "ipad-mini-5",
+		alt: "Обзор на iPad mini 5",
+	},
+	{
 		name: "Обзор на макбук 2017 года",
 		class: "Техника",
 		url: "macbook-2017-review",
@@ -76,6 +112,49 @@ var pages = [
 		class: "Техника",
 		url: "difference-in-macbooks-for-3-years",
 		alt: "Два макбука на столе",
+	},
+
+	{
+		name: "Аквариум",
+		class: "Проекты",
+		url: "aquarium",
+		alt: "Аквариум",
+	},
+	{
+		name: "План развития Аквариума",
+		class: "Проекты",
+		url: "plans-for-the-development-of-the-aquarium",
+		alt: "План развития Аквариума",
+	},
+	{
+		name: "Попытки создать Аквариум",
+		class: "Проекты",
+		url: "attempts-to-create-an-aquarium",
+		alt: "Аквариум",
+	},
+	{
+		name: "Нейросети: не стоит бояться",
+		class: "Разное",
+		url: "neural-networks-dont-be-afraid",
+		alt: "Нейросети: не стоит бояться",
+	},
+	{
+		name: "Нейросеть для проекта",
+		class: "Разное",
+		url: "neural-network-for-the-project",
+		alt: "Нейросеть для проекта",
+	},
+	{
+		name: "Нейросети и продажи",
+		class: "Разное",
+		url: "neural-networks-and-sales",
+		alt: "Нейросети и продажи",
+	},
+	{
+		name: "Кто выбирает Apple",
+		class: "Разное",
+		url: "who-chooses-apple",
+		alt: "Кто выбирает Apple",
 	},
 	{
 		name: "PHP ЖИВ?",
