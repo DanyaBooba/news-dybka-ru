@@ -6,8 +6,19 @@
 
 <h1>Обновления</h1>
 
+<div class="post-tags d-flex">
+    <button onclick="TagUpdatesSpecial()" id="tag_updatesspecial">
+        special
+    </button>
+    <button onclick="TagUpdatesCreagoo()" id="tag_updatescreagoo">
+        creagoo
+    </button>
+</div>
+
 <hr>
 
 {% include "posts/updates.html" %}
+
+<script src="/js/post-tags.js"></script>
 
 {% endblock %}
