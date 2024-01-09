@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const nunjucks = require("gulp-nunjucks");
 const nunjucksRender = require("gulp-nunjucks-render");
+const sitemap = require("gulp-sitemap");
 
 const cssmin = require("gulp-cssmin");
 const concatCss = require("gulp-concat-css");
@@ -95,6 +96,23 @@ function folder() {
 }
 
 //
+// Sitemap
+//
+
+function sitemapCreate() {
+	return gulp
+		.src(["src/pages/**/*.html", "src/*.html", "src/posts/**/*.html"])
+		.pipe(
+			sitemap({
+				siteUrl: "https://news.dybka.ru",
+				changefreq: "weekly",
+				priority: "0.5",
+			})
+		)
+		.pipe(gulp.dest("dist"));
+}
+
+//
 // Server
 //
 
@@ -127,6 +145,6 @@ function watch() {
 //
 
 exports.default = gulp.series(
-	gulp.parallel(njk, css, js, fonts, folder, images, imagesPost),
+	gulp.parallel(njk, css, js, fonts, folder, images, imagesPost, sitemapCreate),
 	gulp.parallel(watch, server)
 );
