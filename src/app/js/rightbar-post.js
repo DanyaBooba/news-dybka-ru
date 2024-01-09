@@ -1,224 +1,40 @@
-var pages = [
-	{
-		name: "Русские Карты 2",
-		class: "Игры",
-		url: "russian-cards-2",
-		alt: "Шапка игры Русские Карты 2",
-	},
-	{
-		name: "Babka On The Hunt",
-		class: "Игры",
-		url: "babka-on-the-hunt",
-		alt: "Шапка игры Бабушка На Охоте",
-	},
-	{
-		name: "Sweetness",
-		class: "Игры",
-		url: "sweetness",
-		alt: "Шапка игры Sweetness",
-	},
-	{
-		name: "Запомни Эти Карты",
-		class: "Игры",
-		url: "remember-these-cards",
-		alt: "Шапка игры Запомни Эти Карты",
-	},
-	{
-		name: "Камень Ножницы Бумага",
-		class: "Игры",
-		url: "rock-paper-scissors",
-		alt: "Шапка игры Камень Ножницы Бумага",
-	},
-	{
-		name: "Пиратки на макбуке",
-		class: "Техника",
-		url: "pirates-on-the-macbook",
-		alt: "Пиратки на макбуке",
-	},
-	{
-		name: "Почему я решил перейти на iPad mini 5?",
-		class: "Техника",
-		url: "why-did-i-decide-to-upgrade-to-the-ipad-mini-5",
-		alt: "Макбук 2017 года на столе",
-	},
-	{
-		name: "Программирование на Айпаде",
-		class: "Техника",
-		url: "programming-on-ipad-mini-5",
-		alt: "Программирование на Айпаде",
-	},
-	{
-		name: "Копия или оригинал",
-		class: "Техника",
-		url: "copy-or-original-which-to-choose",
-		alt: "Копия или оригинал",
-	},
-	{
-		name: "Макбук М1",
-		class: "Техника",
-		url: "macbook-m1",
-		alt: "Макбук М1",
-	},
-	{
-		name: "Обзор на iPad mini 5",
-		class: "Техника",
-		url: "ipad-mini-5",
-		alt: "Обзор на iPad mini 5",
-	},
-	{
-		name: "Обзор на макбук 2017 года",
-		class: "Техника",
-		url: "macbook-2017-review",
-		alt: "Макбук 2017 года на столе",
-	},
-	{
-		name: "AirPods Pro — стоит купить?",
-		class: "Техника",
-		url: "airpods-pro-is-it-worth-the-money",
-		alt: "AirPods Pro на черном фоне",
-	},
-	{
-		name: "iPhone Xr",
-		class: "Техника",
-		url: "the-new-generation-of-the-iphone-xr-device",
-		alt: "iPhone Xr на столе",
-	},
-	{
-		name: "iPad mini 4",
-		class: "Техника",
-		url: "ipad-mini-4-is-an-ambiguous-device",
-		alt: "iPad mini 4 на столе",
-	},
-	{
-		name: "MacBook Pro 2014",
-		class: "Техника",
-		url: "macbook-pro-2014-13-review",
-		alt: "Макбук 2014 года на столе",
-	},
-	{
-		name: "Какие макбуки действительно стоит брать?",
-		class: "Техника",
-		url: "which-macbooks-are-really-worth-getting",
-		alt: "Два макбука на столе",
-	},
-	{
-		name: "Опыт использования iPhone 6S",
-		class: "Техника",
-		url: "experience-using-iphone-6s-for-six-months",
-		alt: "iPhone 6S на столе",
-	},
-	{
-		name: "Разница в макбуках за 3 года",
-		class: "Техника",
-		url: "difference-in-macbooks-for-3-years",
-		alt: "Два макбука на столе",
-	},
+function RandomInteger(max) {
+	return Math.floor(Math.random() * (max - 1));
+}
 
-	{
-		name: "Аквариум",
-		class: "Проекты",
-		url: "aquarium",
-		alt: "Аквариум",
-	},
-	{
-		name: "План развития Аквариума",
-		class: "Проекты",
-		url: "plans-for-the-development-of-the-aquarium",
-		alt: "План развития Аквариума",
-	},
-	{
-		name: "Попытки создать Аквариум",
-		class: "Проекты",
-		url: "attempts-to-create-an-aquarium",
-		alt: "Аквариум",
-	},
-	{
-		name: "Нейросети: не стоит бояться",
-		class: "Разное",
-		url: "neural-networks-dont-be-afraid",
-		alt: "Нейросети: не стоит бояться",
-	},
-	{
-		name: "Нейросеть для проекта",
-		class: "Разное",
-		url: "neural-network-for-the-project",
-		alt: "Нейросеть для проекта",
-	},
-	{
-		name: "Нейросети и продажи",
-		class: "Разное",
-		url: "neural-networks-and-sales",
-		alt: "Нейросети и продажи",
-	},
-	{
-		name: "Кто выбирает Apple",
-		class: "Разное",
-		url: "who-chooses-apple",
-		alt: "Кто выбирает Apple",
-	},
-	{
-		name: "PHP ЖИВ?",
-		class: "Разное",
-		url: "php-is-alive",
-		alt: "Логотип PHP",
-	},
-	{
-		name: "Как успешно продавать на Б/У рынках",
-		class: "Разное",
-		url: "how-to-sell-on-buy-markets",
-		alt: "Портмоне на фоне ноутбука",
-	},
-	{
-		name: "Общение с клиентами в интернете",
-		class: "Разное",
-		url: "communication-with-clients-on-the-internet",
-		alt: "Открытая почта",
-	},
-	{
-		name: "Б/У рынок: что это, с чем его едят?",
-		class: "Разное",
-		url: "used-market-what-is-it-with-what-it-is-eaten",
-		alt: "Купюры в руке",
-	},
-	{
-		name: "Путь программиста — это трудный путь?",
-		class: "Разное",
-		url: "the-path-of-a-programmer-is-a-difficult-path",
-		alt: "Ноутбук на столе",
-	},
-	{
-		name: "История live.creagoo.ru",
-		class: "Разное",
-		url: "project-development-history-live-creagoo-ru-its-forced-closure",
-		alt: "Фотография логотипа Creagoo",
-	},
-	{
-		name: "С чего я начал изучать программирование",
-		class: "Разное",
-		url: "how-did-i-start-learning-programming",
-		alt: "Открытый исходный код",
-	},
-	{
-		name: "Как я борюсь против выгорания",
-		class: "Разное",
-		url: "how-i-fight-against-burnout",
-		alt: "Девушка выгорела на фото",
-	},
-	{
-		name: "Как я разрабатываю сайты на PHP",
-		class: "Разное",
-		url: "how-i-develop-websites-in-php",
-		alt: "Открытый исходный код",
-	},
-	{
-		name: "Разработка pet-проектов",
-		class: "Разное",
-		url: "pet-project-development-what-is-it-and-for-what",
-		alt: "Открытый исходный код",
-	},
-];
+function RightHTML(block) {
+	return (
+		`<div class="col post">
+            <a href="/` +
+		block["url"] +
+		`/" class="card card--link card--rounded border-0">
+                <img src="/` +
+		block["url"] +
+		`/cap@min.jpg" class="card-img" alt="` +
+		block["title"] +
+		`">
+                <div class="card-img-overlay card--bg-gradient d-flex">
+                    <div class="d-flex mt-auto flex-column">
+                        <p class="card-subtitle">
+                            ` +
+		block["class"] +
+		`
+                        </p>
+                        <p class="card-title text-white card--title card--title-mini">
+                            ` +
+		block["title"] +
+		`
+                        </p>
+                    </div>
+                </div>
+            </a>
+            </div>`
+	);
+}
 
-function AddPost() {
+$.getJSON("/js/pages.json", function (data) {
+	var pages = data;
+
 	if (document.getElementById("archivetrue") !== null) return;
 
 	var content = document.getElementById("post--right");
@@ -230,8 +46,18 @@ function AddPost() {
 	var cont = true;
 	var contid = 0;
 
+	var len = document.getElementById("post--main").innerHTML.length;
+
+	var count = parseInt(len / 1000 - 1);
+
+	if (count < 0) count = 0;
+
+	if (count > pages.length) count = pages.length;
+
+	if (count > 3) count = 3;
+
 	while (cont) {
-		if (pages.length <= 0 || contid >= RightCountItems()) {
+		if (pages.length <= 0 || contid >= count) {
 			cont = false;
 			break;
 		}
@@ -248,54 +74,4 @@ function AddPost() {
 
 		content.insertAdjacentHTML("beforeend", RightHTML(block));
 	}
-}
-
-function RightCountItems() {
-	var len = document.getElementById("post--main").innerHTML.length;
-
-	var count = parseInt(len / 1000 - 1);
-
-	if (count < 0) count = 0;
-
-	if (count > pages.length) count = pages.length;
-
-	if (count > 3) count = 3;
-
-	return count;
-}
-
-function RandomInteger(max) {
-	return Math.floor(Math.random() * (max - 1));
-}
-
-function RightHTML(block) {
-	return (
-		`<div class="col post">
-            <a href="/` +
-		block["url"] +
-		`/" class="card card--link card--rounded border-0">
-                <img src="/` +
-		block["url"] +
-		`/cap@min.jpg" class="card-img" alt="` +
-		block["alt"] +
-		`">
-                <div class="card-img-overlay card--bg-gradient d-flex">
-                    <div class="d-flex mt-auto flex-column">
-                        <p class="card-subtitle">
-                            ` +
-		block["class"] +
-		`
-                        </p>
-                        <p class="card-title text-white card--title card--title-mini">
-                            ` +
-		block["name"] +
-		`
-                        </p>
-                    </div>
-                </div>
-            </a>
-            </div>`
-	);
-}
-
-AddPost();
+});

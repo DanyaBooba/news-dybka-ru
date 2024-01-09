@@ -18,5 +18,9 @@
     "gulp-nunjucks": "^5.1.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-sitemap": "^8.0.0"
+  },
+  "dependencies": {
+    "@zadkiel/gulp-feed": "^0.0.5",
+    "fs": "^0.0.1-security"
   }
 }

@@ -1,0 +1,219 @@
+[
+	{
+		"title": "Русские Карты 2",
+		"class": "Игры",
+		"url": "russian-cards-2",
+		"description": "Это захватывающая карточная игра, разработанная специально для развития памяти и развлечения всех возрастных групп.",
+		"content": "Содержимое"
+	},
+	{
+		"title": "Babka On The Hunt",
+		"class": "Игры",
+		"url": "babka-on-the-hunt",
+		"description": "В этой увлекательной игре вы будете играть за бабушку, которая отправляется в путешествие по разным локациям России."
+	},
+	{
+		"title": "Sweetness",
+		"class": "Игры",
+		"url": "sweetness",
+		"description": ""
+	},
+	{
+		"title": "Запомни Эти Карты",
+		"class": "Игры",
+		"url": "remember-these-cards",
+		"description": ""
+	},
+	{
+		"title": "Камень Ножницы Бумага",
+		"class": "Игры",
+		"url": "rock-paper-scissors",
+		"description": ""
+	},
+    {
+		"title": "Аквариум",
+		"class": "Проекты",
+		"url": "aquarium",
+		"description": ""
+	},
+	{
+		"title": "План развития Аквариума",
+		"class": "Проекты",
+		"url": "plans-for-the-development-of-the-aquarium",
+		"description": ""
+	},
+	{
+		"title": "Попытки создать Аквариум",
+		"class": "Проекты",
+		"url": "attempts-to-create-an-aquarium",
+		"description": ""
+	},
+	{
+		"title": "Пиратки на макбуке",
+		"class": "Техника",
+		"url": "pirates-on-the-macbook",
+		"description": ""
+	},
+	{
+		"title": "Почему я решил перейти на iPad mini 5?",
+		"class": "Техника",
+		"url": "why-did-i-decide-to-upgrade-to-the-ipad-mini-5",
+		"description": ""
+	},
+	{
+		"title": "Программирование на Айпаде",
+		"class": "Техника",
+		"url": "programming-on-ipad-mini-5",
+		"description": ""
+	},
+	{
+		"title": "Копия или оригинал",
+		"class": "Техника",
+		"url": "copy-or-original-which-to-choose",
+		"description": ""
+	},
+	{
+		"title": "Макбук М1",
+		"class": "Техника",
+		"url": "macbook-m1",
+		"description": ""
+	},
+	{
+		"title": "Обзор на iPad mini 5",
+		"class": "Техника",
+		"url": "ipad-mini-5",
+		"description": ""
+	},
+	{
+		"title": "Обзор на макбук 2017 года",
+		"class": "Техника",
+		"url": "macbook-2017-review",
+		"description": ""
+	},
+	{
+		"title": "AirPods Pro — стоит купить?",
+		"class": "Техника",
+		"url": "airpods-pro-is-it-worth-the-money",
+		"description": ""
+	},
+	{
+		"title": "iPhone Xr",
+		"class": "Техника",
+		"url": "the-new-generation-of-the-iphone-xr-device",
+		"description": ""
+	},
+	{
+		"title": "iPad mini 4",
+		"class": "Техника",
+		"url": "ipad-mini-4-is-an-ambiguous-device",
+		"description": ""
+	},
+	{
+		"title": "MacBook Pro 2014",
+		"class": "Техника",
+		"url": "macbook-pro-2014-13-review",
+		"description": ""
+	},
+	{
+		"title": "Какие макбуки действительно стоит брать?",
+		"class": "Техника",
+		"url": "which-macbooks-are-really-worth-getting",
+		"description": ""
+	},
+	{
+		"title": "Опыт использования iPhone 6S",
+		"class": "Техника",
+		"url": "experience-using-iphone-6s-for-six-months",
+		"description": ""
+	},
+	{
+		"title": "Разница в макбуках за 3 года",
+		"class": "Техника",
+		"url": "difference-in-macbooks-for-3-years",
+		"description": ""
+	},
+	{
+		"title": "Нейросети: не стоит бояться",
+		"class": "Разное",
+		"url": "neural-networks-dont-be-afraid",
+		"description": ""
+	},
+	{
+		"title": "Нейросеть для проекта",
+		"class": "Разное",
+		"url": "neural-network-for-the-project",
+		"description": ""
+	},
+	{
+		"title": "Нейросети и продажи",
+		"class": "Разное",
+		"url": "neural-networks-and-sales",
+		"description": ""
+	},
+	{
+		"title": "Кто выбирает Apple",
+		"class": "Разное",
+		"url": "who-chooses-apple",
+		"description": ""
+	},
+	{
+		"title": "PHP ЖИВ?",
+		"class": "Разное",
+		"url": "php-is-alive",
+		"description": ""
+	},
+	{
+		"title": "Как успешно продавать на Б/У рынках",
+		"class": "Разное",
+		"url": "how-to-sell-on-buy-markets",
+		"description": ""
+	},
+	{
+		"title": "Общение с клиентами в интернете",
+		"class": "Разное",
+		"url": "communication-with-clients-on-the-internet",
+		"description": ""
+	},
+	{
+		"title": "Б/У рынок: что это, с чем его едят?",
+		"class": "Разное",
+		"url": "used-market-what-is-it-with-what-it-is-eaten",
+		"description": ""
+	},
+	{
+		"title": "Путь программиста — это трудный путь?",
+		"class": "Разное",
+		"url": "the-path-of-a-programmer-is-a-difficult-path",
+		"description": ""
+	},
+	{
+		"title": "История live.creagoo.ru",
+		"class": "Разное",
+		"url": "project-development-history-live-creagoo-ru-its-forced-closure",
+		"description": ""
+	},
+	{
+		"title": "С чего я начал изучать программирование",
+		"class": "Разное",
+		"url": "how-did-i-start-learning-programming",
+		"description": ""
+	},
+	{
+		"title": "Как я борюсь против выгорания",
+		"class": "Разное",
+		"url": "how-i-fight-against-burnout",
+		"description": ""
+	},
+	{
+		"title": "Как я разрабатываю сайты на PHP",
+		"class": "Разное",
+		"url": "how-i-develop-websites-in-php",
+		"description": ""
+	},
+	{
+		"title": "Разработка pet-проектов",
+		"class": "Разное",
+		"url": "pet-project-development-what-is-it-and-for-what",
+		"description": ""
+	}
+]

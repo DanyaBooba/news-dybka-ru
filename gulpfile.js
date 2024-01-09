@@ -8,6 +8,11 @@ const concatCss = require("gulp-concat-css");
 const autoprefixer = require("gulp-autoprefixer");
 const sync = require("browser-sync");
 
+const fs = require("fs");
+const feed = require("@zadkiel/gulp-feed");
+
+const pages = JSON.parse(fs.readFileSync("pages.json", "utf8"));
+
 //
 // Nunjucks
 //
@@ -113,6 +118,30 @@ function sitemapCreate() {
 }
 
 //
+// pages.json
+//
+
+const pagesJson = (done) => {
+	const pages = fs.readFileSync("pages.json", "utf8");
+	fs.writeFileSync("dist/js/pages.json", pages);
+	done();
+};
+
+//
+// Feed XML
+
+function feedXML() {
+	return feed(pages, {
+		transform: (post) => post,
+		render: {
+			"rss.xml": "rss2",
+		},
+	}).pipe(gulp.dest("assets/"));
+}
+
+//
+
+//
 // Server
 //
 
@@ -145,6 +174,15 @@ function watch() {
 //
 
 exports.default = gulp.series(
-	gulp.parallel(njk, css, js, fonts, folder, images, imagesPost, sitemapCreate),
+	gulp.parallel(
+		njk,
+		css,
+		js,
+		fonts,
+		folder,
+		images,
+		imagesPost,
+		gulp.parallel(sitemapCreate, pagesJson, feedXML)
+	),
 	gulp.parallel(watch, server)
 );
