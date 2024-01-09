@@ -1,3 +1,7 @@
+//
+// Need create: dist/js/pages.json
+//
+
 const gulp = require("gulp");
 const nunjucks = require("gulp-nunjucks");
 const nunjucksRender = require("gulp-nunjucks-render");
@@ -154,7 +158,9 @@ function sitemapCreate() {
 
 const pagesJson = (done) => {
 	const pages = fs.readFileSync("pages.json", "utf8");
+
 	fs.writeFileSync("dist/js/pages.json", pages);
+
 	done();
 };
 
@@ -186,7 +192,7 @@ const feedTurboXML = (done) => {
 	pages.forEach((el) => {
 		turboFeed.item({
 			title: el.title,
-			image_url: "cap.jpg",
+			image_url: el.link + "/cap.jpg",
 			image_caption: el.title,
 			url: el.link,
 			author: "Даниил Дыбка",
@@ -197,6 +203,7 @@ const feedTurboXML = (done) => {
 	});
 
 	fs.writeFileSync("dist/turbo.xml", turboFeed.xml());
+
 	done();
 };
 
@@ -241,7 +248,7 @@ exports.default = gulp.series(
 		folder,
 		images,
 		imagesPost,
-		gulp.parallel(sitemapCreate, pagesJson, feedXML, feedTurboXML)
+		gulp.parallel(sitemapCreate, feedXML, pagesJson, feedTurboXML)
 	),
 	gulp.parallel(watch, server)
 );
