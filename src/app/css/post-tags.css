@@ -20,3 +20,15 @@
 .post-tags button:hover {
     background: var(--text-color-8);
 }
+
+.post-tags button:focus-visible {
+    outline: 2px solid var(--text-color-2);
+}
+
+.post-tags button.active {
+    outline: 2px solid var(--text-link-2);
+}
+
+.post-tags button.active:focus-visible {
+    outline: 2px solid var(--text-color-2) !important;
+}
