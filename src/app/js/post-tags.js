@@ -1,42 +1,96 @@
-let techmacbook = false;
-let techiphone = false;
-let techairpods = false;
-let techipad = false;
-let updatesspecial = false;
-let updatescreagoo = false;
+let arr = {
+	techmacbook: false,
+	techiphone: false,
+	techairpods: false,
+	techipad: false,
+	updatesspecial: false,
+	updatescreagoo: false,
+	sundryneuralnetworks: false,
+	sundrymarket: false,
+	sundryphp: false,
+	sundryprogs: false,
+	updatesaquarium: false,
+};
 
 //
 // Tags
 //
 
 function TagTechMacbook() {
-	Tag(techmacbook, "have-macbook", "tag_techmacbook");
-	techmacbook = !techmacbook;
+	let id = "techmacbook";
+	AllCheckFalse(id);
+	Tag(arr[id], "have-macbook", "tag_techmacbook");
+	arr[id] = !arr[id];
 }
 
 function TagTechIphone() {
-	Tag(techiphone, "have-iphone", "tag_techiphone");
-	techiphone = !techiphone;
+	let id = "techiphone";
+	AllCheckFalse(id);
+	Tag(arr[id], "have-iphone", "tag_techiphone");
+	arr[id] = !arr[id];
 }
 
 function TagTechIpad() {
-	Tag(techipad, "have-ipad", "tag_techipad");
-	techipad = !techipad;
+	let id = "techipad";
+	AllCheckFalse(id);
+	Tag(arr[id], "have-ipad", "tag_techipad");
+	arr[id] = !arr[id];
 }
 
 function TagTechAirpods() {
-	Tag(techairpods, "have-airpods", "tag_techairpods");
-	techairpods = !techairpods;
+	let id = "techairpods";
+	AllCheckFalse(id);
+	Tag(arr[id], "have-airpods", "tag_techairpods");
+	arr[id] = !arr[id];
 }
 
 function TagUpdatesSpecial() {
-	Tag(updatesspecial, "update-special", "tag_updatesspecial");
-	updatesspecial = !updatesspecial;
+	let id = "updatesspecial";
+	AllCheckFalse(id);
+	Tag(arr[id], "update-special", "tag_updatesspecial");
+	arr[id] = !arr[id];
 }
 
 function TagUpdatesCreagoo() {
-	Tag(updatescreagoo, "update-creagoo", "tag_updatescreagoo");
-	updatescreagoo = !updatescreagoo;
+	let id = "updatescreagoo";
+	AllCheckFalse(id);
+	Tag(arr[id], "update-creagoo", "tag_updatescreagoo");
+	arr[id] = !arr[id];
+}
+
+function TagUpdatesAquarium() {
+	let id = "updatesaquarium";
+	AllCheckFalse(id);
+	Tag(arr[id], "update-aquarium", "tag_updatesaquarium");
+	arr[id] = !arr[id];
+}
+
+function TagSundryNeuralNetworks() {
+	let id = "sundryneuralnetworks";
+	AllCheckFalse(id);
+	Tag(arr[id], "neural-networks", "tag_sundryneuralnetworks");
+	arr[id] = !arr[id];
+}
+
+function TagSundryMarket() {
+	let id = "sundrymarket";
+	AllCheckFalse(id);
+	Tag(arr[id], "market", "tag_sundrymarket");
+	arr[id] = !arr[id];
+}
+
+function TagSundryPhp() {
+	let id = "sundryphp";
+	AllCheckFalse(id);
+	Tag(arr[id], "php", "tag_sundryphp");
+	arr[id] = !arr[id];
+}
+
+function TagSundryProgs() {
+	let id = "sundryprogs";
+	AllCheckFalse(id);
+	Tag(arr[id], "progs", "tag_sundryprogs");
+	arr[id] = !arr[id];
 }
 
 //
@@ -60,17 +114,23 @@ function Tag(active, itemid, buttonid) {
 		.querySelectorAll(".post-tags button")
 		.forEach((item) => item.classList.remove("active"));
 
-	AllCheckFalse();
-
 	let button = document.getElementById(buttonid);
 	!active ? button.classList.add("active") : button.classList.remove("active");
 }
 
-function AllCheckFalse() {
-	techmacbook = false;
-	techiphone = false;
-	techairpods = false;
-	techipad = false;
-	updatesspecial = false;
-	updatescreagoo = false;
+function AllCheckFalse(ignore) {
+	for (let key in arr) {
+		if (key != ignore) arr[key] = false;
+	}
+
+	// techmacbook = false;
+	// techiphone = false;
+	// techairpods = false;
+	// techipad = false;
+	// updatesspecial = false;
+	// updatescreagoo = false;
+	// sundryneuralnetworks = false;
+	// sundrymarket = false;
+	// sundryphp = false;
+	// sundryprogs = false;
 }

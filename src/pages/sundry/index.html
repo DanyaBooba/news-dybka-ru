@@ -6,8 +6,25 @@
 
 <h1>Разное</h1>
 
+<div class="post-tags d-flex">
+    <button onclick="TagSundryNeuralNetworks()" id="tag_sundryneuralnetworks">
+        нейросети
+    </button>
+    <button onclick="TagSundryMarket()" id="tag_sundrymarket">
+        б/у рынок
+    </button>
+    <button onclick="TagSundryPhp()" id="tag_sundryphp">
+        php
+    </button>
+    <button onclick="TagSundryProgs()" id="tag_sundryprogs">
+        программирование
+    </button>
+</div>
+
 <hr>
 
 {% include "posts/sundry.html" %}
+
+<script src="/js/post-tags.js"></script>
 
 {% endblock %}
