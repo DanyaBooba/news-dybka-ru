@@ -42,7 +42,7 @@
 }
 
 .nav--main .dropdown-menu .dropdown-item {
-    font-family: Unbounded !important;
+    font-family: HalvarBreit !important;
     color: var(--text-default) !important;
 }
 
