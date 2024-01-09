@@ -15,10 +15,22 @@
     margin-bottom: 7px;
 }
 
-.post--main-buttons button:focus {
+.post--main-buttons button:focus-visible {
+    background: var(--text-color-4) !important;
     border: 2px solid var(--text-color-2);
 }
 
 .post--main-buttons button svg {
     margin-left: 3px;
+}
+
+.post--main-buttons button:disabled {
+    background: var(--bg-color) !important;
+    border: 2px dashed var(--text-color-2) !important;
+}
+
+@media(hover: hover) {
+    .post--main-buttons button:hover {
+        background: var(--text-color-4) !important;
+    }
 }

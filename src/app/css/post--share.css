@@ -7,7 +7,8 @@
     transition: .3s;
 }
 
-.post--share .post--share-item svg:hover {
+.post--share .post--share-item svg:hover,
+.post--share .post--share-item button:focus-visible svg {
     fill: var(--text-default);
 }
 
@@ -17,7 +18,8 @@
     transition: .3s;
 }
 
-.post--share .post--share-item img:hover {
+.post--share .post--share-item img:hover,
+.post--share .post--share-item button:focus-visible img {
     filter: grayscale(0%);
     opacity: 1;
 }
