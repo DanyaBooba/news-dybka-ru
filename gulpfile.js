@@ -136,7 +136,15 @@ function feedXML() {
 		render: {
 			"rss.xml": "rss2",
 		},
-	}).pipe(gulp.dest("assets/"));
+		title: "Special — медиасообщество о программировании",
+		description: "Special — медиасообщество о программировании",
+		link: "https://news.dybka.ru/",
+		generator: "https://news.dybka.ru/rss.xml",
+		docs: "https://news.dybka.ru/rss.xml",
+		language: "ru",
+		managingEditor: "daniil@dybka.ru",
+		webMaster: "daniil@dybka.ru",
+	}).pipe(gulp.dest("dist/"));
 }
 
 //

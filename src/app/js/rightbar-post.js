@@ -2,14 +2,19 @@ function RandomInteger(max) {
 	return Math.floor(Math.random() * (max - 1));
 }
 
+function RightBarUrl(data) {
+	let url = new URL(data);
+	return url.pathname;
+}
+
 function RightHTML(block) {
 	return (
 		`<div class="col post">
-            <a href="/` +
-		block["url"] +
+            <a href="` +
+		RightBarUrl(block["link"]) +
 		`/" class="card card--link card--rounded border-0">
-                <img src="/` +
-		block["url"] +
+                <img src="` +
+		RightBarUrl(block["link"]) +
 		`/cap@min.jpg" class="card-img" alt="` +
 		block["title"] +
 		`">
