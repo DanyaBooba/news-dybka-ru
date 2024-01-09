@@ -116,6 +116,8 @@ function Tag(active, itemid, buttonid) {
 
 	let button = document.getElementById(buttonid);
 	!active ? button.classList.add("active") : button.classList.remove("active");
+
+	AddCountPosts();
 }
 
 function AllCheckFalse(ignore) {
