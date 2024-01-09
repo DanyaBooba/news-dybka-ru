@@ -1,7 +1,6 @@
 const gulp = require("gulp");
 const nunjucks = require("gulp-nunjucks");
 const nunjucksRender = require("gulp-nunjucks-render");
-const sitemap = require("gulp-sitemap");
 
 const cssmin = require("gulp-cssmin");
 const concatCss = require("gulp-concat-css");
@@ -10,8 +9,40 @@ const sync = require("browser-sync");
 
 const fs = require("fs");
 const feed = require("@zadkiel/gulp-feed");
+const sitemap = require("gulp-sitemap");
+const turbo = require("turbo-rss");
 
 const pages = JSON.parse(fs.readFileSync("pages.json", "utf8"));
+
+var turboFeed = new turbo({
+	title: "Special — медиасообщество о программировании",
+	link: "https://news.dybka.ru",
+	description: "Special — медиасообщество о программировании",
+	language: "ru",
+});
+
+var turboFeedMenu = [
+	{
+		link: "https://news.dybka.ru",
+		text: "Читать",
+	},
+	{
+		link: "https://news.dybka.ru/tech",
+		text: "Техника",
+	},
+	{
+		link: "https://news.dybka.ru/updates",
+		text: "Проекты",
+	},
+	{
+		link: "https://news.dybka.ru/games",
+		text: "Игры",
+	},
+	{
+		link: "https://news.dybka.ru/sundry",
+		text: "Разное",
+	},
+];
 
 //
 // Nunjucks
@@ -148,6 +179,26 @@ function feedXML() {
 }
 
 //
+// Feed Turbo XML
+//
+
+const feedTurboXML = (done) => {
+	pages.forEach((el) => {
+		turboFeed.item({
+			title: el.title,
+			image_url: "cap.jpg",
+			image_caption: el.title,
+			url: el.link,
+			author: "Даниил Дыбка",
+			pubDate: "Mon, 1 Jan 2024 12:00:00 GMT",
+			content: el.content,
+			menu: turboFeedMenu,
+		});
+	});
+
+	fs.writeFileSync("dist/turbo.xml", turboFeed.xml());
+	done();
+};
 
 //
 // Server
@@ -190,7 +241,7 @@ exports.default = gulp.series(
 		folder,
 		images,
 		imagesPost,
-		gulp.parallel(sitemapCreate, pagesJson, feedXML)
+		gulp.parallel(sitemapCreate, pagesJson, feedXML, feedTurboXML)
 	),
 	gulp.parallel(watch, server)
 );

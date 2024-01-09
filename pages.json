@@ -10,210 +10,245 @@
 		"title": "Babka On The Hunt",
 		"class": "Игры",
 		"link": "https://news.dybka.ru/babka-on-the-hunt",
-		"description": "В этой увлекательной игре вы будете играть за бабушку, которая отправляется в путешествие по разным локациям России."
+		"description": "В этой увлекательной игре вы будете играть за бабушку, которая отправляется в путешествие по разным локациям России.",
+		"content": "Содержимое"
 	},
 	{
 		"title": "Sweetness",
 		"class": "Игры",
 		"link": "https://news.dybka.ru/sweetness",
-		"description": ""
+		"description": "Sweetness – это увлекательная мобильная игра, в которой ты играешь за маленького исследователя, который путешествует по большому и неизвестному миру, чтобы найти самый сладкий сахар.",
+		"content": ""
 	},
 	{
 		"title": "Запомни Эти Карты",
 		"class": "Игры",
 		"link": "https://news.dybka.ru/remember-these-cards",
-		"description": ""
+		"description": "Забудьте о скучных методах тренировки памяти! Теперь вы можете с легкостью и с удовольствием находиться в стиле с нашей новой игрой – Запомни эти карты!",
+		"content": ""
 	},
 	{
 		"title": "Камень Ножницы Бумага",
 		"class": "Игры",
 		"link": "https://news.dybka.ru/rock-paper-scissors",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
     {
 		"title": "Аквариум",
 		"class": "Проекты",
 		"link": "https://news.dybka.ru/aquarium",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "План развития Аквариума",
 		"class": "Проекты",
 		"link": "https://news.dybka.ru/plans-for-the-development-of-the-aquarium",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Попытки создать Аквариум",
 		"class": "Проекты",
 		"link": "https://news.dybka.ru/attempts-to-create-an-aquarium",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Пиратки на макбуке",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/pirates-on-the-macbook",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Почему я решил перейти на iPad mini 5?",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/why-did-i-decide-to-upgrade-to-the-ipad-mini-5",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Программирование на Айпаде",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/programming-on-ipad-mini-5",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Копия или оригинал",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/copy-or-original-which-to-choose",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Макбук М1",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/macbook-m1",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Обзор на iPad mini 5",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/ipad-mini-5",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Обзор на макбук 2017 года",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/macbook-2017-review",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "AirPods Pro — стоит купить?",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/airpods-pro-is-it-worth-the-money",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "iPhone Xr",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/the-new-generation-of-the-iphone-xr-device",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "iPad mini 4",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/ipad-mini-4-is-an-ambiguous-device",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "MacBook Pro 2014",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/macbook-pro-2014-13-review",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Какие макбуки действительно стоит брать?",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/which-macbooks-are-really-worth-getting",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Опыт использования iPhone 6S",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/experience-using-iphone-6s-for-six-months",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Разница в макбуках за 3 года",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/difference-in-macbooks-for-3-years",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Нейросети: не стоит бояться",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/neural-networks-dont-be-afraid",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Нейросеть для проекта",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/neural-network-for-the-project",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Нейросети и продажи",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/neural-networks-and-sales",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Кто выбирает Apple",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/who-chooses-apple",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "PHP ЖИВ?",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/php-is-alive",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Как успешно продавать на Б/У рынках",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/how-to-sell-on-buy-markets",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Общение с клиентами в интернете",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/communication-with-clients-on-the-internet",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Б/У рынок: что это, с чем его едят?",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/used-market-what-is-it-with-what-it-is-eaten",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Путь программиста — это трудный путь?",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/the-path-of-a-programmer-is-a-difficult-path",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "История live.creagoo.ru",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/project-development-history-live-creagoo-ru-its-forced-closure",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "С чего я начал изучать программирование",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/how-did-i-start-learning-programming",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Как я борюсь против выгорания",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/how-i-fight-against-burnout",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Как я разрабатываю сайты на PHP",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/how-i-develop-websites-in-php",
-		"description": ""
+		"description": "",
+		"content": ""
 	},
 	{
 		"title": "Разработка pet-проектов",
 		"class": "Разное",
 		"link": "https://news.dybka.ru/pet-project-development-what-is-it-and-for-what",
-		"description": ""
+		"description": "",
+		"content": ""
 	}
 ]
