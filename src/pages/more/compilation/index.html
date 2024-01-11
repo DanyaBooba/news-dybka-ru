@@ -9,47 +9,18 @@
 <hr>
 
 <div class="post--block">
+        <h2>2024</h2>
+        <ul id="2024"></ul>
+</div>
+
+<div class="post--block">
         <h2>2023</h2>
-        <ul id="2023">
-                <li><a href="/how-to-sell-on-buy-markets/" class="link">Как успешно продавать на Б/У рынках</a></li>
-                <li><a href="/communication-with-clients-on-the-internet/" class="link">Общение с клиентами в
-                                интернете</a></li>
-                <li><a href="/used-market-what-is-it-with-what-it-is-eaten/" class="link">Б/У рынок: что это, с чем
-                                его едят?</a></li>
-                <li><a href="/the-path-of-a-programmer-is-a-difficult-path/" class="link">Путь программиста — это
-                                трудный путь?</a></li>
-                <li><a href="/project-development-history-live-creagoo-ru-its-forced-closure/" class="link">История
-                                live.creagoo.ru — вынужденное закрытие</a></li>
-                <li><a href="/how-did-i-start-learning-programming/" class="link">С чего я начал изучать
-                                программирование</a></li>
-                <li><a href="/how-i-fight-against-burnout/" class="link">Как я борюсь против выгорания</a></li>
-                <li><a href="/how-i-develop-websites-in-php/" class="link">Как я разрабатываю сайты на PHP</a></li>
-                <li><a href="/pet-project-development-what-is-it-and-for-what/" class="link">Разработка pet-проектов —
-                                что это и для чего?</a></li>
-                <li><a href="/great-news-channel-special/" class="link">Обновление медиа канала Special</a></li>
-                <li><a href="/change-creagoo-ru-simplify-improve-and-share/" class="link">Упрощение, улучшение и
-                                «Поделиться»</a></li>
-                <li><a href="/novyy-sayt-creagoo-ru/" class="link">Новый сайт creagoo.ru</a></li>
-                <li><a href="/babkaonthehuntclassic/" class="link">Babka On The Hunt</a></li>
-                <li><a href="/sweetness/" class="link">Sweetness</a></li>
-                <li><a href="/rememberthesecards/" class="link">Запомни эти карты</a></li>
-                <li><a href="/rockpaperscissors/" class="link">Камень ножницы бумага</a></li>
-                <li><a href="/macbook-2017-review/" class="link">Обзор на макбук 2017 года</a></li>
-                <li><a href="/difference-in-macbooks-for-3-years/" class="link">Разница в макбуках за 3 года</a></li>
-                <li><a href="/ipad-mini-4-is-an-ambiguous-device/" class="link">iPad mini 4 — неоднозначный девайс</a>
-                </li>
-                <li><a href="/the-new-generation-of-the-iphone-xr-device/" class="link">Новое поколение устройства —
-                                iPhone
-                                XR</a></li>
-                <li><a href="/macbook-pro-2014-13-review/" class="link">Macbook Pro 2014 13' — обзор</a></li>
-                <li><a href="/experience-using-iphone-6s-for-six-months/" class="link">Опыт использования iPhone 6s в
-                                течение полугода</a></li>
-        </ul>
+        <ul id="2023"></ul>
 </div>
 
 <div class="post--block">
         <h2>2022</h2>
-        <ul >
+        <ul>
                 <li><a href="/more/archive/creagoo-is-now-available-in-vk/" class="link">Creagoo теперь доступен в
                                 ВК</a></li>
                 <li><a href="/more/archive/how-i-started-learning-laravel/" class="link">Как я начал изучать Laravel</a>
@@ -83,7 +54,7 @@
 
 <div class="post--block">
         <h2>2021</h2>
-        <ul >
+        <ul>
                 <li><a href="/more/archive/belated-result/" class="link">Запоздалый результат</a></li>
                 <li><a href="/more/archive/cloud-storage-development/" class="link">Разработка облачного хранилища</a>
                 </li>
@@ -101,7 +72,7 @@
 
 <div class="post--block">
         <h2>2020</h2>
-        <ul >
+        <ul>
                 <li><a href="/more/archive/babka-on-the-hunt-light-development-is-progressing-successfully/"
                                 class="link">Babka On The
                                 Hunt Light — разработка продвигается успешно</a></li>
@@ -126,5 +97,24 @@
                 <li><a href="/more/archive/subdomains/" class="link">Поддомены</a></li>
         </ul>
 </div>
+
+<script src="/js/jquery.js"></script>
+<script>
+    $.getJSON("/js/pages.json", function (pages) {
+        let y2024 = document.getElementById("2024");
+        let y2023 = document.getElementById("2023");
+
+        pages.forEach(element => {
+            let html = "<li><a href='" + new URL(element.link).pathname + "' class='link'>" + element.title + "</a></li>";
+
+            if(element.year_publish === "2023") {
+                y2023.insertAdjacentHTML("beforeend", html);
+            }
+            else if(element.year_publish === "2024") {
+                y2024.insertAdjacentHTML("beforeend", html);
+            }
+        });
+    });
+</script>
 
 {% endblock %}
