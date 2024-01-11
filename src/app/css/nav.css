@@ -85,7 +85,7 @@
     color: var(--text-default) !important;
 }
 
-.nav--main .dropdown-menu .dropdown-item:hover {
+.nav--main .dropdown-menu .dropdown-item:is(:hover, :focus) {
     background: var(--dropdown-item-hover) !important;
 }
 
