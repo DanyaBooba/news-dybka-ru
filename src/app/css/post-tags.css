@@ -1,6 +1,7 @@
 .post-tags
 {
     margin-bottom: 5px;
+    flex-wrap: wrap;
 }
 
 .post-tags button {
@@ -15,6 +16,7 @@
     padding: 6px 20px;
     border-radius: 50px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .post-tags button:hover {
