@@ -3,7 +3,6 @@
 //
 
 const gulp = require("gulp");
-const nunjucks = require("gulp-nunjucks");
 const nunjucksRender = require("gulp-nunjucks-render");
 
 const cssmin = require("gulp-cssmin");
