@@ -42,7 +42,7 @@
 
 .footer--main .footer--block-copyright
 {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 @media(max-width: 768px) {
@@ -72,4 +72,17 @@
 
 .footer--main .footer--block-copyright a:hover {
     color: var(--text-default);
+}
+
+/* Social */
+
+.footer--block-social
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer--block-social div {
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
