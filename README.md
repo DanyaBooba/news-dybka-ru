@@ -106,29 +106,29 @@ RSS-лента формируется на основе данных из фай
 ## Добавление статьи
 
 Добавление статьи на сайте медиасообщества Special невероятно простое. Чтобы добавить статью на сайт, вы можете использовать
-разные инструкции, основная инструкция описана на сайте: (https://news.dybka.ru/about/post/)[https://news.dybka.ru/about/post/].
+разные инструкции, основная инструкция описана на сайте: [https://news.dybka.ru/about/post/](https://news.dybka.ru/about/post/).
 
 Добавить статью вы можете 2-мя способами: самостоятельно и через администратора.
 
-Сначала нужно подготовить проект статьи. После успешной подготовки проекта, отправьте (пулл-реквеста)[https://github.com/DanyaBooba/special-2024/pulls] [пулл-реквеста](https://github.com/DanyaBooba/special-2024/pulls)
+Сначала нужно подготовить проект статьи. После успешной подготовки проекта, отправьте [пулл-реквеста](https://github.com/DanyaBooba/special-2024/pulls)
 на данный репозиторий.
 
 Второй вариант — отправить готовый проект статьи администратору. Связаться с администратором:
 
-- (телеграм)[https://ddybka.t.me]
-- (вконтакте)[https://vk.com/ddybka]
-- (daniil@dybka.ru)[mailto:daniil@dybka.ru]
+- [телеграм](https://ddybka.t.me)
+- [вконтакте](https://vk.com/ddybka)
+- [daniil@dybka.ru](mailto:daniil@dybka.ru)
 
 ## Лицензии
 
 Автор проекта: Даниил Дыбка.
 
-Смотреть профиль GitHub: (открыть)[https://github.com/DanyaBooba]
+Смотреть профиль GitHub: [открыть](https://github.com/DanyaBooba)
 
 Профили в других соцсетях:
 
-- (телеграм)[https://ddybka.t.me]
-- (вконтакте)[https://vk.com/ddybka]
-- (daniil@dybka.ru)[mailto:daniil@dybka.ru]
+- [телеграм](https://ddybka.t.me)
+- [вконтакте](https://vk.com/ddybka)
+- [daniil@dybka.ru](mailto:daniil@dybka.ru)
 
 Вы можете связаться со мной по почте или телеграму.
