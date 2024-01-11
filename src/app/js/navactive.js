@@ -1,9 +1,27 @@
 function ActiveNav() {
 	console.log("active");
 
-	let url = new URL(window.location);
+	let urlpath = new URL(window.location);
 
-	console.log(url.pathname);
+	let url = String(urlpath.pathname).split("/");
+
+	switch (url[1]) {
+		case "more":
+			console.log("more");
+			break;
+
+		case "tech":
+			console.log("tech");
+			break;
+
+		case "updates":
+			console.log("updates");
+			break;
+
+		case "games":
+			console.log("games");
+			break;
+	}
 }
 
 ActiveNav();

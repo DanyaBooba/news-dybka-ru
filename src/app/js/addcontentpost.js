@@ -35,7 +35,9 @@ function AddContentPost(classname, rowclass) {
 			}
 		});
 
-		AddCountPostsCount(count);
+		if (typeof AddCountPostsCount === "function") {
+			AddCountPostsCount(count);
+		}
 	});
 }
 
