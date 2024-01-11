@@ -1,5 +1,5 @@
 function AddContentPostTech() {
-	console.log("Tech");
+	AddContentPost("Техника", "row-tech");
 }
 
 function AddContentPostUpdates() {
@@ -7,11 +7,11 @@ function AddContentPostUpdates() {
 }
 
 function AddContentPostSundry() {
-	console.log("Sundry");
+	AddContentPost("Разное", "row-sundry");
 }
 
 function AddContentPostGames() {
-	console.log("Games");
+	AddContentPost("Игры", "row-games");
 }
 
 function AddContentPost(classname, rowclass) {
@@ -29,6 +29,8 @@ function AddContentPost(classname, rowclass) {
 					new URL(element.link).pathname,
 					element.title
 				);
+
+				console.log(count + ": " + html);
 
 				row.insertAdjacentHTML("beforeend", html);
 				count += 1;
