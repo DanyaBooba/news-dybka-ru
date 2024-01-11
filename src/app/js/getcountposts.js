@@ -16,7 +16,14 @@ function AddCountPosts() {
 
 	let count = document.querySelectorAll("div.post:not(.d-none)").length;
 
-	console.log(count);
+	block.textContent =
+		count + " " + FormOfWord(count, "запись", "записи", "записей");
+}
+
+function AddCountPostsCount(count) {
+	let block = document.getElementById("getcountposts");
+
+	if (!block) return;
 
 	block.textContent =
 		count + " " + FormOfWord(count, "запись", "записи", "записей");

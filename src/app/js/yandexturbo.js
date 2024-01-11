@@ -19,4 +19,4 @@ function YandexTurbo() {
 	navigator.clipboard.writeText(newblock);
 }
 
-// YandexTurbo();
+YandexTurbo();
