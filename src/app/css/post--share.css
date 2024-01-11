@@ -3,7 +3,7 @@
 }
 
 .post--share .post--share-item svg {
-    fill: var(--text-color-4);
+    fill: var(--text-color-9);
     transition: .3s;
 }
 

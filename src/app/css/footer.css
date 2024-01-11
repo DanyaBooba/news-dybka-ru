@@ -80,9 +80,32 @@
 {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .footer--block-social div {
     margin-bottom: 5px;
-    margin-right: 10px;
+    margin-right: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.footer--block-social div a img {
+    filter: grayscale(100%);
+    opacity: .3;
+    transition: .3s;
+}
+
+.footer--block-social div a svg {
+    fill: var(--text-color-9);
+    transition: .3s;
+}
+
+.footer--block-social div a:is(:hover, :focus) img {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.footer--block-social div a:is(:hover, :focus) svg {
+    fill: var(--text-default);
 }
