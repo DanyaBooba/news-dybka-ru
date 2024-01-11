@@ -30,8 +30,6 @@ function AddContentPost(classname, rowclass) {
 					element.title
 				);
 
-				console.log(count + ": " + html);
-
 				row.insertAdjacentHTML("beforeend", html);
 				count += 1;
 			}
