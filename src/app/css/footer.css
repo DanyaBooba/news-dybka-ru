@@ -18,20 +18,22 @@
     margin-bottom: 10px;
 }
 
-.footer--main .footer--text-link
+.footer--main a.footer--text-link
 {
     padding-left: 0px;
     color: var(--text-default);
 
-    border-bottom: 1px solid var(--text-color-4);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--text-color-4);
+    text-decoration-thickness: 1.25px;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 2px;
 
-    transition: .3s;
+    transition: .3s text-decoration;
 }
 
-.footer--main .footer--text-link:hover,
-.footer--main .footer--text-link:focus {
-    border-bottom: 1px solid var(--text-default);
+.footer--main a.footer--text-link:is(:hover, :focus) {
+    text-decoration-color: var(--text-default);
 }
 
 .footer--main .footer--block-copyright

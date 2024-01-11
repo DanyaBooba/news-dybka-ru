@@ -61,16 +61,19 @@
 }
 
 .post--main a {
-    text-decoration: none;
-    color: var(--text-default);
+    color: var(--text-link-1);
 
-    border-bottom: 1px solid var(--text-color-4);
+    text-decoration: underline;
+    text-decoration-color: var(--text-link-underline-1);
+    text-decoration-thickness: 1.25px;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 3px;
+
     transition: .3s;
 }
 
-.post--main a:hover,
-.post--main a:focus {
-    border-bottom: 1px solid var(--text-default);
+.post--main a:is(:hover, :focus) {
+    text-decoration-color: var(--text-link-underline-2);
 }
 
 .post--main .hash svg {

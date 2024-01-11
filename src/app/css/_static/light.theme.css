@@ -17,6 +17,8 @@
     --text-color-8: #e1e9f3;
     --text-link-1:#0D6EFD;
     --text-link-2:#4B94FF;
+    --text-link-underline-1: rgb(13, 110, 253, 0.3);
+    --text-link-underline-2: rgb(75, 148, 255, 1);
     --bg-light-1:#ECF5F8;
     --bg-light-2:#F2ECF8;
     --bg-light-3:#ecf8f0;
