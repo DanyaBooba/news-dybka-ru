@@ -156,9 +156,19 @@ function sitemapCreate() {
 //
 
 const pagesJson = (done) => {
-	const pages = fs.readFileSync("pages.json", "utf8");
+	let newpages = [];
 
-	fs.writeFileSync("dist/js/pages.json", pages);
+	pages.forEach((element) => {
+		newpages.push({
+			id: element.id,
+			title: element.title,
+			class: element.class,
+			link: element.link,
+			year_publish: element.year_publish,
+		});
+	});
+
+	fs.writeFileSync("dist/js/pages.json", JSON.stringify(newpages));
 
 	done();
 };
@@ -251,3 +261,5 @@ exports.default = gulp.series(
 	),
 	gulp.parallel(watch, server)
 );
+
+exports.json = pagesJson;
