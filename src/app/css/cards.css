@@ -1,13 +1,53 @@
-.card--bg-gradient {
+.post a div.card-img-overlay {
+    display: flex;
+
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
 }
 
 @media(max-width: 767px) {
-    .card--bg-gradient {
+    .post a div.card-img-overlay {
         background: rgb(0, 0, 0);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
     }
+}
+
+.post a div.card-img-overlay div {
+    display: flex;
+    margin-top: auto;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media(min-width: 768px) {
+    .post a div.card-img-overlay div.post-1 h4 {
+        font-size: 2.5rem;
+    }
+}
+
+.post a div.card-img-overlay div.post-2 {
+    margin-left: 6px !important;
+}
+
+.post a div.card-img-overlay div.post-mini {
+    margin-left: 4px !important;
+}
+
+.post a div.card-img-overlay div.post-mini h4 {
+    font-size: 1.25rem !important;
+}
+
+.post a div.card-img-overlay div p {
+    font-family: Geologica-Light;
+    color: var(--text-color-4);
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.post a div.card-img-overlay div h4 {
+    color: #fff !important;
+    line-height: 110%;
 }
 
 .card--link {
@@ -37,6 +77,7 @@
 .card--title-mini {
     font-size: 1rem;
     margin-bottom: 0px !important;
+    line-height: 100%;
 }
 
 .card--title-1-padding {

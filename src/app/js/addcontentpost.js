@@ -47,24 +47,18 @@ function HTMLContentPost(classname, id, link, title) {
 		id +
 		'"><a href="' +
 		link +
-		'/" class="card card--link card--rounded border-0">';
+		'/" class="card">';
 
 	data +=
 		'<img src="' +
 		link +
 		'/cap.jpg" class="card-img" alt="' +
 		title +
-		'"><div class="d-flex card-img-overlay card--bg-gradient">';
+		'"><div class="card-img-overlay">';
 
-	data +=
-		'<div class="d-flex mt-auto flex-column card--title-2-padding"><p class="card-subtitle">' +
-		classname +
-		"</p>";
+	data += '<div class="post-2"><p>' + classname + "</p>";
 
-	data +=
-		'<p class="card-title text-white card--title card--title-2">' +
-		title +
-		"</p>";
+	data += "<h4>" + title + "</h4>";
 
 	data += "</div></div></a></div>";
 

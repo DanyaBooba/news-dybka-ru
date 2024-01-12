@@ -3,9 +3,9 @@
     margin-top: 80px;
 }
 
-.footer--main .footer--text-copyright
-{
+.footer--main .footer--text-copyright {
     color: var(--text-color-2);
+    word-break: break-word !important;
 }
 
 .footer--main ul,

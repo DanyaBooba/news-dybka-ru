@@ -12,24 +12,24 @@ function RightHTML(block) {
 		`<div class="col post">
             <a href="` +
 		RightBarUrl(block["link"]) +
-		`/" class="card card--link card--rounded border-0">
+		`/" class="card">
                 <img src="` +
 		RightBarUrl(block["link"]) +
 		`/cap@min.jpg" class="card-img" alt="` +
 		block["title"] +
 		`">
-                <div class="card-img-overlay card--bg-gradient d-flex">
-                    <div class="d-flex mt-auto flex-column">
-                        <p class="card-subtitle">
+                <div class="card-img-overlay">
+                    <div class="post-mini">
+                        <p>
                             ` +
 		block["class"] +
 		`
                         </p>
-                        <p class="card-title text-white card--title card--title-mini">
+                        <h4>
                             ` +
 		block["title"] +
 		`
-                        </p>
+                        </h4>
                     </div>
                 </div>
             </a>
