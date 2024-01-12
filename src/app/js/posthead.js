@@ -1,7 +1,7 @@
 function LinkClearText(text) {
 	var text = text.toLowerCase();
 
-	text = text.replaceAll(" ", "-");
+	text = text.replaceAll(" ", "");
 	text = text.replaceAll(".", "-");
 	text = text.replaceAll("«", "");
 	text = text.replaceAll("»", "");
