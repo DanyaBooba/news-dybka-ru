@@ -52,7 +52,7 @@ function HTMLContentPost(classname, id, link, title) {
 	data +=
 		'<img src="' +
 		link +
-		'/cap.jpg" class="card-img" alt="' +
+		'/cap@min.jpg" class="card-img" alt="' +
 		title +
 		'"><div class="card-img-overlay">';
 
