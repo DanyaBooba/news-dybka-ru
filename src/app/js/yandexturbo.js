@@ -14,8 +14,6 @@ function YandexTurbo() {
 	newblock = newblock.replaceAll(/(\r\n|\n|\r)/gm, "");
 	newblock = newblock.replaceAll('"', "'");
 
-	console.log(newblock);
-
 	navigator.clipboard.writeText(newblock);
 }
 

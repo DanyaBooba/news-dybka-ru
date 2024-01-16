@@ -14,6 +14,10 @@ function AddContentPostGames() {
 	AddContentPost("Игры", "row-games");
 }
 
+function AddContentPostMusic() {
+	AddContentPost("Музыка", "row-music");
+}
+
 function AddContentPost(classname, rowclass) {
 	let row = document.getElementById(rowclass);
 
