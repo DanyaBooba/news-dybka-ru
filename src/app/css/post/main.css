@@ -5,6 +5,7 @@
 }
 
 .post--main .post--main-more {
+    margin-top: 2rem;
     color: var(--text-color-2);
 }
 

@@ -2,6 +2,7 @@
 {
     background: var(--text-color-3);
     color: var(--text-default) !important;
+    border: none !important;
 
     height: 30px;
     width: 100px;
@@ -31,8 +32,18 @@
     border: 2px dashed var(--text-color-2) !important;
 }
 
+.post--main-buttons button:not(:disabled):hover {
+    background-color: var(--text-color-4) !important;
+}
+
 @media(hover: hover) {
     .post--main-buttons button:hover {
-        background: var(--text-color-4) !important;
+        background-color: var(--text-color-4) !important;
+    }
+}
+
+@media(hover: none) {
+    .post--main-buttons button:active {
+        background-color: var(--text-color-4) !important;
     }
 }
