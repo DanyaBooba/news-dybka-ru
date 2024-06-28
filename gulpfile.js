@@ -1,26 +1,24 @@
+const fs = require("fs");
 const gulp = require("gulp");
-const nunjucksRender = require("gulp-nunjucks-render");
-
+const turbo = require("turbo-rss");
+const sync = require("browser-sync");
 const cssmin = require("gulp-cssmin");
+const sitemap = require("gulp-sitemap");
+const feed = require("@zadkiel/gulp-feed");
 const concatCss = require("gulp-concat-css");
 const autoprefixer = require("gulp-autoprefixer");
-const sync = require("browser-sync");
-
-const fs = require("fs");
-const feed = require("@zadkiel/gulp-feed");
-const sitemap = require("gulp-sitemap");
-const turbo = require("turbo-rss");
+const nunjucksRender = require("gulp-nunjucks-render");
 
 const pages = JSON.parse(fs.readFileSync("pages.json", "utf8"));
 
-var turboFeed = new turbo({
+const turboFeed = new turbo({
 	title: "Special — медиасообщество о программировании",
 	link: "https://news.dybka.ru",
 	description: "Special — медиасообщество о программировании",
 	language: "ru",
 });
 
-var turboFeedMenu = [
+const turboFeedMenu = [
 	{
 		link: "https://news.dybka.ru",
 		text: "Читать",
@@ -71,12 +69,12 @@ function njk() {
 
 function css() {
 	return gulp
-		.src("src/app/css/*.css")
+		.src("src/app/css/**/*.css")
 		.pipe(autoprefixer())
 		.pipe(concatCss("index.css"))
 		.pipe(cssmin())
 		.pipe(gulp.dest("dist/css"))
-		.pipe(gulp.src("src/app/css/_static/*.css"))
+		.pipe(gulp.src("src/app/css-static/*.css"))
 		.pipe(autoprefixer())
 		.pipe(cssmin())
 		.pipe(gulp.dest("dist/css"));

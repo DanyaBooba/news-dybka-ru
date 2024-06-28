@@ -1,0 +1,1 @@
+main li,main p{font-size:20px}main hr{margin-bottom:50px}main p{margin-bottom:30px}main a{color:var(--text-default);text-decoration:none;margin:0;padding:0;border-bottom:1px solid var(--text-color-4)}main a:focus,main a:hover{color:var(--text-default)!important;border-bottom:1px solid var(--text-default)}main img{border-radius:var(--border-radius-2);width:100%;height:auto}
