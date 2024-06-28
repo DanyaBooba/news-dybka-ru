@@ -5,57 +5,25 @@ function setValue(value) {
 	let dark = document.getElementById("stylesheetdark")
 	let values = document.querySelectorAll('input[name="color-theme"]')
 
-    switch (value) {
-        case 'dark':
-            console.log('dark')
-            break
-        case 'light':
-            console.log('light')
-            break
-        case 'auto':
-            console.log('auto')
-            break
+    value !== 'auto' ? localStorage.setItem('color-theme', value) : localStorage.removeItem('color-theme')
+    for (let currentValue of values) {
+        currentValue.value === value ? currentValue.setAttribute('checked', 'true') : currentValue.removeAttribute('checked')
     }
 
-    return
-
-	if (value === "dark") {
-		localStorage.setItem("color-theme", "dark")
-		light.media = "not all"
-		dark.media = "all"
-
-		for (var i of values) {
-			if (i.value === "dark") {
-				i.setAttribute("checked", "true")
-			} else {
-				i.removeAttribute("checked")
-			}
-		}
-	} else if (value === "light") {
-		localStorage.setItem("color-theme", "light")
-		light.media = "all"
-		dark.media = "not all"
-
-		for (var i of values) {
-			if (i.value === "light") {
-				i.setAttribute("checked", "true")
-			} else {
-				i.removeAttribute("checked")
-			}
-		}
-	} else {
-		localStorage.removeItem("color-theme")
-		light.media = "(prefers-color-scheme: light)"
-		dark.media = "(prefers-color-scheme: dark)"
-
-		for (var i of values) {
-			if (i.value === "auto") {
-				i.setAttribute("checked", "true")
-			} else {
-				i.removeAttribute("checked")
-			}
-		}
-	}
+    switch (value) {
+        case 'dark':
+            light.media = 'not all'
+		    dark.media = 'all'
+            break
+        case 'light':
+            light.media = 'all'
+		    dark.media = 'not all'
+            break
+        case 'auto':
+            light.media = '(prefers-color-scheme: light)'
+		    dark.media = '(prefers-color-scheme: dark)'
+            break
+    }
 }
 
 function inputSetValue() {
