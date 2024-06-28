@@ -20,7 +20,7 @@ function AddCountPosts() {
 		count + " " + FormOfWord(count, "запись", "записи", "записей");
 }
 
-function AddCountPostsCount(count) {
+function setCountPosts(count) {
 	let block = document.getElementById("getcountposts");
 
 	if (!block) return;

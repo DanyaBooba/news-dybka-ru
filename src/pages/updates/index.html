@@ -2,32 +2,23 @@
 
 {% block main %}
 
-<title>Блок «Проекты» на сайте Special</title>
+<title>Проекты – Special</title>
 
 <h1>Проекты</h1>
 
 <div class="post-tags d-flex">
-    <button onclick="TagUpdatesAquarium()" id="tag_updatesaquarium">
-        аквариум
-    </button>
-    <button onclick="TagUpdatesSpecial()" id="tag_updatesspecial">
-        special
-    </button>
-    <button onclick="TagUpdatesCreagoo()" id="tag_updatescreagoo">
-        creagoo
-    </button>
+    <button onclick="TagUpdatesAquarium()" id="tag_updatesaquarium">аквариум</button>
+    <button onclick="TagUpdatesSpecial()" id="tag_updatesspecial">special</button>
+    <button onclick="TagUpdatesCreagoo()" id="tag_updatescreagoo">creagoo</button>
 </div>
 
 <hr>
 
 <div class="row row-cols-1 row-cols-lg-2" id="row-updates"></div>
-
 <div class="text-center mt-3" id="getcountposts"></div>
 
 <script src="/js/post/tags/tags.js"></script>
 <script src="/js/search/count-posts.js"></script>
-
 <script src="/js/cdn/jquery.js"></script>
-<script src="/js/post/content/add-content.js"></script>
 
 {% endblock %}

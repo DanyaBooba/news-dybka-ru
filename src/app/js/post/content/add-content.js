@@ -1,63 +1,43 @@
-const AddContentPostTech = () => AddContentPost("Техника", "row-tech");
-const AddContentPostUpdates = () => AddContentPost("Проекты", "row-updates");
-const AddContentPostSundry = () => AddContentPost("Разное", "row-sundry");
+const AddContentPostTech = () => addContentFromPost('Техника', 'row-tech')
+const AddContentPostUpdates = () => addContentFromPost('Проекты', 'row-updates')
+const AddContentPostSundry = () => addContentFromPost('Разное', 'row-sundry')
+const AddContentPostGames = () => addContentFromPost('Игры', 'row-games')
+const AddContentPostMusic = () => addContentFromPost('Музыка', 'row-music')
 
+function addContentFromPost(tagTitle, rowTitle) {
+	const row = document.getElementById(rowTitle)
+	if (!row) return
 
-function AddContentPostGames() {
-	AddContentPost("Игры", "row-games");
-}
+	$.getJSON('/js/pages.json', function (pages) {
+		let countPosts = 0
+		pages.forEach(post => {
+			if (post.class === tagTitle) {
+                const html = contentHTML({
+                    tagTitle : tagTitle,
+					id: post.id,
+					link: new URL(post.link).pathname,
+					title: post.title
+                })
 
-function AddContentPostMusic() {
-	AddContentPost("Музыка", "row-music");
-}
-
-function AddContentPost(classname, rowclass) {
-	let row = document.getElementById(rowclass);
-
-	if (!row) return;
-
-	$.getJSON("/js/pages.json", function (pages) {
-		let count = 0;
-		pages.forEach((element) => {
-			if (element.class === classname) {
-				let html = HTMLContentPost(
-					classname,
-					element.id,
-					new URL(element.link).pathname,
-					element.title
-				);
-
-				row.insertAdjacentHTML("beforeend", html);
-				count += 1;
+				row.insertAdjacentHTML('beforeend', html)
+				countPosts += 1
 			}
-		});
+		})
 
-		if (typeof AddCountPostsCount === "function") {
-			AddCountPostsCount(count);
-		}
-	});
+		typeof setCountPosts === 'function' ? setCountPosts(countPosts) : null
+	})
 }
 
-function HTMLContentPost(classname, id, link, title) {
-	let data =
-		'<div class="col post" id="' +
-		id +
-		'"><a href="' +
-		link +
-		'/" class="card">';
-
-	data +=
-		'<img src="' +
-		link +
-		'/cap@min.jpg" class="card-img" alt="' +
-		title +
-		'"><div class="card-img-overlay">';
-
-	data += '<div class="post-2"><p>' + classname + "</p>";
-
-	data += "<h4>" + title + "</h4>";
-
-	data += "</div></div></a></div>";
-
-	return data;
+function contentHTML({ id, link, title, tagTitle }) {
+    return `<div class="col post" id="${id}">
+                <a href="${link}/" class="card">
+                    <img src="${link}/cap@min.jpg" class="card-img" alt="${title}">
+                    <div class="card-img-overlay">
+                        <div class="post-2">
+                            <p>${tagTitle}</p>
+                            <h4>${title}</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>`
 }
