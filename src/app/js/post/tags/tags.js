@@ -11,7 +11,7 @@ function setTag(button) {
     setTagActive(active, button.id)
     posts.forEach(post => post.id === searchid || active ? post.classList.remove('d-none') : post.classList.add('d-none'))
 
-    typeof AddCountPosts === 'function' ? AddCountPosts() : null
+    typeof checkCountPosts === 'function' ? checkCountPosts() : null
 }
 
 function setTagActive(active, buttonId) {
