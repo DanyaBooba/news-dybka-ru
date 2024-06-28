@@ -1,6 +1,8 @@
 @media(min-width: 992px) {
     main .row .col-md-8 {
         width: 70% !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     main .row .col-md-1 {
@@ -15,12 +17,24 @@
         margin-top: 140px;
     }
 
+    .post--right-margin-1 {
+        margin-top: 93px !important;
+    }
+
     .post--right-margin-2 {
-        margin-top: 177px !important;
+        margin-top: 169px !important;
     }
 
     .post--right-margin-3 {
-        margin-top: 214px !important;
+        margin-top: 207px !important;
+    }
+
+    .post--right-margin-4 {
+        margin-top: 245px !important;
+    }
+
+    .post--right-margin-2 {
+        margin-top: 169px !important;
     }
 }
 

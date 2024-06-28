@@ -29,8 +29,7 @@
 
     text-decoration: underline;
     text-decoration-color: var(--text-color-4);
-    text-decoration-thickness: 1.25px;
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.15em;
     text-decoration-thickness: 2px;
 
     transition: .3s text-decoration;
@@ -43,6 +42,7 @@
 .footer--main .footer--block-copyright
 {
     margin-top: 80px;
+    margin-bottom: 2rem;
 }
 
 @media(max-width: 768px) {

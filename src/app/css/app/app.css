@@ -106,7 +106,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    letter-spacing: -0.7px;
+    /* letter-spacing: -0.7px; */
 }
 
 .card-img {
