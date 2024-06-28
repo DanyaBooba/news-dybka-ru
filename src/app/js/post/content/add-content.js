@@ -1,14 +1,7 @@
-function AddContentPostTech() {
-	AddContentPost("Техника", "row-tech");
-}
+const AddContentPostTech = () => AddContentPost("Техника", "row-tech");
+const AddContentPostUpdates = () => AddContentPost("Проекты", "row-updates");
+const AddContentPostSundry = () => AddContentPost("Разное", "row-sundry");
 
-function AddContentPostUpdates() {
-	AddContentPost("Проекты", "row-updates");
-}
-
-function AddContentPostSundry() {
-	AddContentPost("Разное", "row-sundry");
-}
 
 function AddContentPostGames() {
 	AddContentPost("Игры", "row-games");

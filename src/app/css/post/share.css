@@ -3,13 +3,14 @@
 }
 
 .post--share .post--share-item svg {
-    fill: var(--text-color-9);
+    fill: none !important;
+    stroke: var(--text-color-9);
     transition: .3s;
 }
 
 .post--share .post--share-item svg:hover,
 .post--share .post--share-item button:focus-visible svg {
-    fill: var(--text-default);
+    stroke: var(--text-default);
 }
 
 .post--share .post--share-item img {

@@ -1,13 +1,10 @@
-function ActiveNav() {
-	let urlpath = new URL(window.location);
+function navActiveLinks() {
+    const url = String((new URL(window.location)).pathname).split('/')[1]
+    const elementActive = document.getElementById(`nav-${url}`)
 
-	let url = String(urlpath.pathname).split("/");
+	if (!elementActive) return
 
-	let obj = document.getElementById("nav-" + url[1]);
-
-	if (!obj) return;
-
-	obj.classList.add("active");
+	elementActive.classList.add('active')
 }
 
-ActiveNav();
+navActiveLinks()

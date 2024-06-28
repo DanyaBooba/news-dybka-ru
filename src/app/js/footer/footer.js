@@ -1,44 +1,26 @@
-function HTMLFooterLikePost(link, title) {
-	return (
-		"<li class='footer--text-li'><a href='" +
-		link +
-		"' class='footer--text-link'>" +
-		title +
-		"</a></li>"
-	);
-}
+const randomMax = max => Math.floor(Math.random() * (max - 1))
+const footerFavoritePostContent = (link, title) => `<li class='footer--text-li'><a href='${link}' class='footer--text-link'>${title}</a></li>`
 
-function RandomInteger(max) {
-	return Math.floor(Math.random() * (max - 1));
-}
+function footerFavoritePost() {
+	const footer = document.getElementById("thisislikes")
+	if (!footer) return
 
-function FooterLikePosts() {
-	var footer = document.getElementById("thisislikes");
+	$.getJSON("/js/pages.json", function (pages) {
+		let countMaxPosts = 10
+		let countAdd = 0
 
-	if (!footer) return;
+		while (pages.length > 0 && countAdd < countMaxPosts) {
+            const randomIndexPost = randomMax(pages.length)
+            const currentPostUrl = new URL(pages[randomIndexPost].link).pathname
+            const currentPostTitle = pages[randomIndexPost].title
+            const currentPost = footerFavoritePostContent(currentPostUrl, currentPostTitle)
 
-	$.getJSON("/js/pages.json", function (data) {
-		var pages = data;
+			footer.insertAdjacentHTML("beforeend", currentPost)
 
-		let count = 10;
-		var countadded = 0;
-
-		while (!(pages.length <= 0 || countadded >= count)) {
-			let index = RandomInteger(pages.length);
-
-			footer.insertAdjacentHTML(
-				"beforeend",
-				HTMLFooterLikePost(
-					new URL(pages[index].link).pathname,
-					pages[index].title
-				)
-			);
-
-			pages.splice(index, 1);
-
-			countadded += 1;
+			pages.splice(randomIndexPost, 1)
+			countAdd += 1
 		}
-	});
+	})
 }
 
-FooterLikePosts();
+footerFavoritePost()
