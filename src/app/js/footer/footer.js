@@ -1,4 +1,4 @@
-const randomMax = max => Math.floor(Math.random() * (max - 1))
+function randomMax(max) { return Math.floor(Math.random() * (max - 1)) }
 const footerFavoritePostContent = (link, title) => `<li class='footer--text-li'><a href='${link}' class='footer--text-link'>${title}</a></li>`
 
 function footerFavoritePost() {

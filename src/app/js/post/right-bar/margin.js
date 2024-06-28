@@ -1,15 +1,15 @@
-function RightBarMargin() {
-	let title = document.getElementsByTagName("h1")[0];
+function addMarginToRightBar() {
+    const lineHeight = 48
 
-	if (!title) return;
+    const title = document.querySelector("h1")
+	if (!title) return
 
-	let lines = Math.round(Number(title.offsetHeight) / 48);
+	const countLines = Math.round(Number(title.offsetHeight) / lineHeight)
 
-	let rightbar = document.getElementById("post--right");
+    const rightbar = document.getElementById("post--right")
+    if (!rightbar) return
 
-	if (!rightbar) return;
-
-	if (lines > 1) rightbar.classList.add("post--right-margin-" + lines);
+	countLines > 1 ? rightbar.classList.add(`post--right-margin-${countLines}`) : null
 }
 
-RightBarMargin();
+addMarginToRightBar()
