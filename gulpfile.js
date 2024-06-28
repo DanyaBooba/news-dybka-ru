@@ -1,7 +1,3 @@
-//
-// Need create: dist/js/pages.json
-//
-
 const gulp = require("gulp");
 const nunjucksRender = require("gulp-nunjucks-render");
 
@@ -257,8 +253,9 @@ exports.default = gulp.series(
 		folder,
 		images,
 		imagesPost,
-		gulp.parallel(sitemapCreate, feedXML, pagesJson, feedTurboXML)
 	),
+    gulp.parallel(sitemapCreate, feedXML),
+    gulp.parallel(pagesJson, feedTurboXML),
 	gulp.parallel(watch, server)
 );
 
