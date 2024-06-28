@@ -21,6 +21,8 @@
 }
 
 .post--main-buttons button svg {
+    fill: none !important;
+    stroke: var(--text-default) !important;
     margin-left: 3px;
 }
 

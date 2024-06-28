@@ -1,15 +1,6 @@
 .post a div.card-img-overlay {
     display: flex;
-
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
-}
-
-@media(max-width: 767px) {
-    .post a div.card-img-overlay {
-        background: rgb(0, 0, 0);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 100%);
-    }
+    background: linear-gradient(0deg, rgba(33, 33, 33,0.8) 6%, rgba(33, 33, 33,0.3) 71%, rgba(51,51,51,0) 100%);
 }
 
 .post a div.card-img-overlay div {
