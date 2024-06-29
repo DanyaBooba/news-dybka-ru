@@ -18,6 +18,12 @@
     line-height: 95%;
 }
 
+.post--main h2,
+.post--main h3,
+.post--main h4 {
+    margin-top: 3rem;
+}
+
 .post--main img {
     margin-bottom: 30px;
     border-radius: 12px;
