@@ -5,7 +5,7 @@ function footerFavoritePost() {
 	const footer = document.getElementById("thisislikes")
 	if (!footer) return
 
-	$.getJSON("/js/pages.json", function (pages) {
+	$.getJSON("/js/posts.json", function (pages) {
 		let countMaxPosts = 10
 		let countAdd = 0
 

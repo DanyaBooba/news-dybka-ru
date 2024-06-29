@@ -8,7 +8,7 @@ function addContentFromPost(tagTitle, rowTitle) {
 	const row = document.getElementById(rowTitle)
 	if (!row) return
 
-	$.getJSON('/js/pages.json', function (pages) {
+	$.getJSON('/js/posts.json', function (pages) {
 		let countPosts = 0
 		pages.forEach(post => {
 			if (post.class === tagTitle) {

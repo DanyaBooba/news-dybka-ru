@@ -51,7 +51,7 @@
 }
 
 .post--main a:is(:hover, :focus) {
-    text-decoration-color: var(--text-link-underline-2);
+    text-decoration-color: var(--text-link-underline-2) !important;
 }
 
 .post--main .hash svg {

@@ -3,7 +3,7 @@ const rightbarUrl = data => (new URL(data)).pathname
 const min = (a, b) => a < b ? a : b
 const max = (a, b) => a > b ? a : b
 
-$.getJSON("/js/pages.json", function (pages) {
+$.getJSON("/js/posts.json", function (pages) {
 	if (document.getElementById("archivetrue") !== null) return
 
 	const content = document.getElementById("post--right")

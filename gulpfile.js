@@ -9,7 +9,7 @@ const concatCss = require("gulp-concat-css");
 const autoprefixer = require("gulp-autoprefixer");
 const nunjucksRender = require("gulp-nunjucks-render");
 
-const pages = JSON.parse(fs.readFileSync("pages.json", "utf8"));
+const pages = JSON.parse(fs.readFileSync("posts.json", "utf8"));
 
 const turboFeed = new turbo({
 	title: "Special — медиасообщество о программировании",
@@ -146,7 +146,7 @@ function sitemapCreate() {
 }
 
 //
-// pages.json
+// posts.json
 //
 
 const pagesJson = (done) => {
@@ -162,7 +162,7 @@ const pagesJson = (done) => {
 		});
 	});
 
-	fs.writeFileSync("dist/js/pages.json", JSON.stringify(newpages));
+	fs.writeFileSync("dist/js/posts.json", JSON.stringify(newpages));
 
 	done();
 };
@@ -243,18 +243,8 @@ function watch() {
 //
 
 exports.default = gulp.series(
-	gulp.parallel(
-		njk,
-		css,
-		js,
-		fonts,
-		folder,
-		images,
-		imagesPost,
-	),
+	gulp.parallel(njk, css, js, fonts, folder, images, imagesPost),
     gulp.parallel(sitemapCreate, feedXML),
     gulp.parallel(pagesJson, feedTurboXML),
 	gulp.parallel(watch, server)
 );
-
-exports.json = pagesJson;
