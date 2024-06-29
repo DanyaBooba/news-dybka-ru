@@ -1,10 +1,6 @@
 function clearText(thisText) {
-	let text = thisText.toLowerCase();
-
-	text = text.replaceAll(" ", "");
-	text = text.replaceAll(".", "-");
-	text = text.replaceAll("«", "");
-	text = text.replaceAll("»", "");
+    let text = thisText.toLowerCase().trim().replaceAll(" ", "")
+        .replaceAll(".", "-").replaceAll("«", "").replaceAll("»", "");
 
 	return text;
 }
