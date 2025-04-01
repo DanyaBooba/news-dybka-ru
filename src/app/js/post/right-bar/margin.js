@@ -12,7 +12,7 @@ const marginClass = () => {
     const title = document.querySelector("h1")
 
     const countLines = Math.round(Number(title.offsetHeight) / lineHeight) - 1
-	return `post--right-margin-${countLines}`
+    return `post--right-margin-${countLines}`
 }
 
 function addMarginToRightBar(styleValue) {
@@ -31,5 +31,7 @@ function addMarginToShare(styleValue) {
 
 const styleValue = marginStyle()
 
-addMarginToRightBar(styleValue)
-addMarginToShare(styleValue)
+if (window.innerWidth > 991) {
+    addMarginToRightBar(styleValue)
+    addMarginToShare(styleValue)
+}

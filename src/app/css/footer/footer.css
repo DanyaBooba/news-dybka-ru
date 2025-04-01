@@ -1,10 +1,10 @@
-.footer--main
-{
+.footer--main {
     margin-top: 80px;
 }
 
 .footer--main .footer--text-copyright {
     color: var(--text-color-2);
+    font-size: .875rem;
     word-break: break-word !important;
 }
 
@@ -22,26 +22,25 @@
     white-space: nowrap;
 }
 
-.footer--main a.footer--text-link
-{
+.footer--main a.footer--text-link {
     padding-left: 0px;
     color: var(--text-default);
 
     text-decoration: underline;
     text-decoration-color: var(--text-color-4);
-    text-underline-offset: 0.15em;
-    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1.25px;
 
-    transition: .3s text-decoration;
+    transition: .15s text-decoration;
 }
 
 .footer--main a.footer--text-link:is(:hover, :focus) {
     text-decoration-color: var(--text-default);
 }
 
-.footer--main .footer--block-copyright
-{
+.footer--main .footer--block-copyright {
     margin-top: 80px;
+    font-size: .875rem;
     margin-bottom: 2rem;
 }
 
@@ -65,9 +64,8 @@
 }
 
 .footer--main .footer--block-copyright a {
-    text-decoration: none;
     color: var(--text-color-2);
-    transition: .3s;
+    transition: .15s;
 }
 
 .footer--main .footer--block-copyright a:hover {
@@ -76,8 +74,7 @@
 
 /* Social */
 
-.footer--block-social
-{
+.footer--block-social {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -93,12 +90,12 @@
 .footer--block-social div a img {
     filter: grayscale(100%);
     opacity: .3;
-    transition: .3s;
+    transition: .15s;
 }
 
 .footer--block-social div a svg {
     fill: var(--text-color-9);
-    transition: .3s;
+    transition: .15s;
 }
 
 .footer--block-social div a:is(:hover, :focus) img {

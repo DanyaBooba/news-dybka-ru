@@ -1,5 +1,5 @@
 .post .card img {
-    transition: .7s;
+    transition: .15s;
 }
 
 .post .card {
@@ -8,12 +8,13 @@
 
 .post a div.card-img-overlay {
     display: flex;
-    /* box-shadow: 0 20px 40px 0 rgba(0,0,0,.2); */
-    background: linear-gradient(-180deg,transparent,rgba(0,0,0,.65));
+    background: rgba(0, 0, 0, .4);
+    transition: .15s;
 }
 
 .post a div.card-img-overlay:hover {
     background-size: 110% !important;
+    background: #ffffff00;
 }
 
 .post a div.card-img-overlay div {
@@ -26,28 +27,28 @@
 
 .post:focus-within .card img {
     transform: scale(1.05);
-    transition: .7s;
+    transition: .15s;
 }
 
 @media(hover: hover) {
     .post:hover .card img {
         transform: scale(1.05);
-        transition: .7s;
+        transition: .15s;
     }
 
     .post:hover .card {
-        box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .2);
     }
 }
 
 @media(hover: none) {
     .post:active .card img {
         transform: scale(1.05);
-        transition: .7s;
+        transition: .15s;
     }
 
     .post:active .card {
-        box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .2);
     }
 }
 
@@ -72,26 +73,25 @@
 .post a div.card-img-overlay div p {
     font-family: Geologica-Light;
     color: #fff;
-    font-size: 1rem;
+    font-size: .875rem;
     margin-bottom: 4px;
 }
 
 .post a div.card-img-overlay div h4 {
     color: #fff !important;
-    line-height: 110%;
+    line-height: 26px;
 }
 
 .card--link {
-    transition: .3s;
+    transition: .15s;
 }
 
 .card--link:hover {
     box-shadow: 0 .5rem 1rem rgba(var(--bs-body-color-rgb), .15) !important;
 }
 
-.card--rounded
-{
-    border-radius: 8px;
+.card--rounded {
+    border-radius: 12px;
 }
 
 .card-subtitle {
@@ -116,8 +116,7 @@
     margin-right: 20px !important;
 }
 
-.card--title-1
-{
+.card--title-1 {
     font-size: 2.5rem;
     margin-bottom: 10px !important;
 }

@@ -51,8 +51,7 @@ b {
 
 /* Title */
 
-.main-title
-{
+.main-title {
     margin-bottom: 20px;
     margin-top: 50px;
 }
@@ -122,27 +121,9 @@ h6,
     font-size: 16px !important;
 }
 
-.post--block
-{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.post--block p {
-    margin-bottom: 20px;
-    font-size: 25px;
-}
-
-.post--block ul {
-    font-size: 25px;
-}
-
-.post--block li {
-    margin-bottom: 10px;
-}
-
-.post--block h2 {
-    margin-bottom: 10px;
+.post--block {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 svg.icon {
@@ -150,5 +131,8 @@ svg.icon {
 }
 
 hr {
-    margin-bottom: 30px;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }

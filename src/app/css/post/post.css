@@ -9,26 +9,22 @@
 .post a {
     border: none;
     border-radius: 1rem;
-    transition: .3s;
+    transition: .15s;
 }
 
-.post--font-size
-{
+.post--font-size {
     font-size: 1.25rem !important;
 }
 
-.post--start-p
-{
+.post--start-p {
     color: var(--text-muted);
 }
 
-.post--start
-{
+.post--start {
     margin-bottom: 30px;
 }
 
-.post--start-img
-{
+.post--start-img {
     margin-bottom: 30px;
 }
 
@@ -37,15 +33,13 @@
     border-radius: 1rem !important;
 }
 
-.main--post
-{
+.main--post {
     margin-top: 0px;
     padding-top: 0px;
     /* padding-top: 15px; */
 }
 
-.post--more
-{
+.post--more {
     padding-top: 50px;
     font-size: 16px;
 }

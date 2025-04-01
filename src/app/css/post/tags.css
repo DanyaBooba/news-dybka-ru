@@ -1,5 +1,4 @@
-.post-tags
-{
+.post-tags {
     margin-bottom: 5px;
     flex-wrap: wrap;
 }
@@ -13,7 +12,7 @@
     cursor: pointer;
 
     background: var(--text-color-7);
-    padding: 6px 20px;
+    padding: 8px 24px;
     border-radius: 50px !important;
     margin-right: 10px;
     margin-bottom: 10px;

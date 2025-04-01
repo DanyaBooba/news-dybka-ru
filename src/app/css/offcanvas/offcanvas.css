@@ -1,13 +1,12 @@
-.offcanvas
-{
-    background: var(--bg-color);
+.offcanvas {
+    background: var(--bg-canvas);
 }
 
 .offcanvas .offcanvas-body .offcanvas--item {
     background: var(--text-color-7);
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 2rem;
+    padding-left: 1.5rem;
     border-radius: 12px;
     color: var(--text-default);
     text-decoration: none;
@@ -15,9 +14,9 @@
 }
 
 .offcanvas .offcanvas-body .offcanvas--item span svg {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     fill: none !important;
     stroke: var(--text-default) !important;
-    margin-right: 1.5rem;
+    margin-right: .75rem;
 }

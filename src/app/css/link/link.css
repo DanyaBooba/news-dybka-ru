@@ -3,13 +3,12 @@ a.link {
     margin: 0;
     padding: 0;
 
-    text-decoration: underline!important;
-    text-decoration-color: var(--text-color-4)!important;
-    text-decoration-thickness: 1.25px!important;
-    text-underline-offset: 0.2em!important;
-    text-decoration-thickness: 2px!important;
+    text-decoration: underline !important;
+    text-decoration-color: var(--text-color-4) !important;
+    text-decoration-thickness: 1.25px !important;
+    text-underline-offset: 0.2em !important;
 
-    transition: .3s;
+    transition: .15s;
 }
 
 a.link:is(:hover, :focus) {

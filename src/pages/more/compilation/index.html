@@ -61,8 +61,7 @@
                 <li><a href="/more/archive/i-didnt-expect-this-babka-on-the-hunt-light/" class="link">Такого я не
                                 ожидал... Babka On The
                                 Hunt Light</a></li>
-                <li><a href="/more/archive/the-development-of-the-babka-on-the-hunt-light-is-suspended/"
-                                class="link">Приостанавливается
+                <li><a href="/more/archive/the-development-of-the-babka-on-the-hunt-light-is-suspended/" class="link">Приостанавливается
                                 разработка Babka On The Hunt Light</a></li>
                 <li><a href="/more/archive/skins-effects-and-more-babka-on-the-hunt-light/" class="link">Скины, эффекты
                                 и другое — Babka
@@ -73,8 +72,7 @@
 <div class="post--block">
         <h2>2020</h2>
         <ul>
-                <li><a href="/more/archive/babka-on-the-hunt-light-development-is-progressing-successfully/"
-                                class="link">Babka On The
+                <li><a href="/more/archive/babka-on-the-hunt-light-development-is-progressing-successfully/" class="link">Babka On The
                                 Hunt Light — разработка продвигается успешно</a></li>
                 <li><a href="/more/archive/babka-on-the-hunt-update-lolzas-and-achievements/" class="link">Обновление
                                 Babka On The Hunt:
@@ -100,21 +98,21 @@
 
 <script src="/js/cdn/jquery.js"></script>
 <script>
-    $.getJSON("/js/pages.json", function (pages) {
-        let y2024 = document.getElementById("2024");
-        let y2023 = document.getElementById("2023");
+        $.getJSON("/js/posts.json", function (pages) {
+                let y2024 = document.getElementById("2024");
+                let y2023 = document.getElementById("2023");
 
-        pages.forEach(element => {
-            let html = "<li><a href='" + new URL(element.link).pathname + "' class='link'>" + element.title + "</a></li>";
+                pages.forEach(element => {
+                        let html = "<li><a href='" + new URL(element.link).pathname + "' class='link'>" + element.title + "</a></li>";
 
-            if(element.year_publish === "2023") {
-                y2023.insertAdjacentHTML("beforeend", html);
-            }
-            else if(element.year_publish === "2024") {
-                y2024.insertAdjacentHTML("beforeend", html);
-            }
+                        if (element.year_publish === "2023") {
+                                y2023.insertAdjacentHTML("beforeend", html);
+                        }
+                        else if (element.year_publish === "2024") {
+                                y2024.insertAdjacentHTML("beforeend", html);
+                        }
+                });
         });
-    });
 </script>
 
 {% endblock %}

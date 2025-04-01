@@ -12,10 +12,9 @@
     text-decoration-color: var(--text-color-4) !important;
     text-decoration-thickness: 1.25px !important;
     text-underline-offset: 0.2em !important;
-    text-decoration-thickness: 2px !important;
     border: none !important;
 
-    transition: .3s text-decoration;
+    transition: .15s text-decoration;
 }
 
 .post--block ul li a:is(:hover, :focus) {

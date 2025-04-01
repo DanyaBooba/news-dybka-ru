@@ -1,39 +1,38 @@
-.nav--main
-{
+.nav--main {
     /* background-color: var(--nav-bg); */
 
     margin-bottom: 30px;
 }
 
-.nav-link--h3-mb
-{
+.nav-link--h3-mb {
     padding-bottom: 3px;
 }
 
 .header--nav-link {
-    padding: 1rem !important;
+    padding: 8px 24px !important;
     margin: 0;
-    margin-left: 5px !important;
-    margin-right: 5px !important;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
     color: var(--text-default) !important;
 
-    font-size: 20px;
+    /* font-size: 20px; */
     letter-spacing: 1px !important;
     font-family: HalvarBreit;
     text-transform: lowercase !important;
+    border-radius: 50px;
 
-    transition: .3s;
+    transition: .15s;
 }
 
 .header--nav-link.active {
-    background: var(--bg-color);
+    background: var(--text-color-7);
     color: var(--text-default) !important;
 
     transform: scale(1.1);
 }
 
 .header--nav-link:is(:hover, :focus) {
-    background: var(--bg-color);
+    background: var(--text-color-8);
     color: var(--text-default) !important;
 
     transform: scale(1.1);
@@ -54,11 +53,11 @@
     border-radius: 0;
     border: none;
     background: transparent !important;
-    transition: .3s;
+    transition: .15s;
 }
 
 .header--nav-button-in button svg {
-    transition: .3s;
+    transition: .15s;
 }
 
 .header--nav-button-in button:focus-visible {
@@ -75,8 +74,7 @@
     transform: scale(1.1);
 }
 
-.header--nav-button
-{
+.header--nav-button {
     margin-bottom: 4.2px;
 }
 
