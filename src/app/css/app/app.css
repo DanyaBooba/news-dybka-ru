@@ -136,3 +136,9 @@ hr {
     margin-top: 10px;
     margin-bottom: 25px;
 }
+
+@media(max-width: 991px) {
+    main {
+        margin-top: 5rem;
+    }
+}

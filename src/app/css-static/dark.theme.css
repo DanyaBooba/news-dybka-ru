@@ -1,6 +1,7 @@
 :root {
     --bg-color: #17152b;
-    --bg-canvas: rgba(255, 255, 255, 0.3);
+    --bg-canvas: rgba(23, 21, 44, 0.3);
+    --bg-header: rgba(23, 21, 44, 0.3);
     --text-default: #fff;
     --text-invert: #000;
     --bg-color-rgba: rgba(23, 21, 43, .5);
