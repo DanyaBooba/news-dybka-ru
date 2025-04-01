@@ -1,5 +1,4 @@
-.mainblock--subtitle
-{
+.mainblock--subtitle {
     background: var(--nav-bg);
     margin-top: 50px;
     margin-bottom: 30px;
@@ -8,5 +7,5 @@
     padding-left: 100px;
     font-size: 50px;
     border-radius: 10px;
-    font-family: HalvarBreit;
+    font-family: Unbounded;
 }

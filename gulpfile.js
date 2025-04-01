@@ -36,6 +36,10 @@ const turboFeedMenu = [
 		text: "Игры",
 	},
 	{
+		link: "https://news.dybka.ru/music",
+		text: "Музыка",
+	},
+	{
 		link: "https://news.dybka.ru/sundry",
 		text: "Разное",
 	},
@@ -159,6 +163,7 @@ const pagesJson = (done) => {
 			class: element.class,
 			link: element.link,
 			year_publish: element.year_publish,
+			author: element.author,
 		});
 	});
 
@@ -244,7 +249,7 @@ function watch() {
 
 exports.default = gulp.series(
 	gulp.parallel(njk, css, js, fonts, folder, images, imagesPost),
-    gulp.parallel(sitemapCreate, feedXML),
-    gulp.parallel(pagesJson, feedTurboXML),
+	gulp.parallel(sitemapCreate, feedXML),
+	gulp.parallel(pagesJson, feedTurboXML),
 	gulp.parallel(watch, server)
 );

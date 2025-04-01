@@ -69,6 +69,7 @@
 .post a div.card-img-overlay div.post-mini h4 {
     font-size: 1.25rem !important;
     text-shadow: 2px 2px 2px #454545;
+    margin-bottom: 0;
 }
 
 .post a div.card-img-overlay div p {
@@ -105,7 +106,7 @@
 }
 
 .card--title {
-    font-family: HalvarBreit;
+    font-family: Unbounded;
 }
 
 .card--title-mini {

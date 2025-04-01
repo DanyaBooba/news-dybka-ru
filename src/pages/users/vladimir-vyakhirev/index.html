@@ -1,0 +1,18 @@
+{% extends "content.html" %}
+
+{% block main %}
+
+<div class="user-profile">
+    <h1>Владимир Вяхирев</h1>
+    <p id="count-posts">Автор _ записей</p>
+</div>
+
+<div class="row row-cols-1 row-cols-lg-2" id="users-load-data"></div>
+
+<script src="/js/users/load-data.js"></script>
+<script src="/js/cdn/jquery.js"></script>
+<script>
+    contentFromPostsUser('Владимир Вяхирев')
+</script>
+
+{% endblock %}

@@ -21,7 +21,7 @@
     margin-right: 8px !important;
     color: var(--text-default) !important;
 
-    font-family: HalvarBreit;
+    font-family: Unbounded;
     text-transform: lowercase !important;
     border-radius: 50px;
 
@@ -83,8 +83,9 @@
 }
 
 .nav--main .dropdown-menu .dropdown-item {
-    font-family: HalvarBreit !important;
+    font-family: Unbounded !important;
     color: var(--text-default) !important;
+    text-transform: lowercase !important;
 }
 
 .nav--main .dropdown-menu .dropdown-item:is(:hover, :focus) {

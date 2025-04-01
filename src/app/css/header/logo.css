@@ -1,5 +1,5 @@
 .header .logo span {
-    font-family: HalvarBreit;
+    font-family: Unbounded;
     font-size: 60px;
     padding-left: 15px;
 }
@@ -15,7 +15,7 @@
         padding-left: 12px;
     }
 
-        .header .logo svg {
+    .header .logo svg {
         width: 48px;
         height: 48px;
     }
