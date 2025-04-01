@@ -1,7 +1,13 @@
 .nav--main {
-    /* background-color: var(--nav-bg); */
-
-    margin-bottom: 30px;
+    position: sticky;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+    background-color: var(--bg-header);
+    margin-bottom: 15px;
 }
 
 .nav-link--h3-mb {
@@ -15,8 +21,6 @@
     margin-right: 8px !important;
     color: var(--text-default) !important;
 
-    /* font-size: 20px; */
-    letter-spacing: 1px !important;
     font-family: HalvarBreit;
     text-transform: lowercase !important;
     border-radius: 50px;
@@ -85,6 +89,10 @@
 
 .nav--main .dropdown-menu .dropdown-item:is(:hover, :focus) {
     background: var(--dropdown-item-hover) !important;
+}
+
+.nav--main .dropdown-menu .dropdown-item.active {
+    background-color: var(--text-color-7);
 }
 
 .nav--main .dropdown-menu {

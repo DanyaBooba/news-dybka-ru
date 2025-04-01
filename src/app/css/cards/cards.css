@@ -68,6 +68,7 @@
 
 .post a div.card-img-overlay div.post-mini h4 {
     font-size: 1.25rem !important;
+    text-shadow: 2px 2px 2px #454545;
 }
 
 .post a div.card-img-overlay div p {
@@ -75,11 +76,13 @@
     color: #fff;
     font-size: .875rem;
     margin-bottom: 4px;
+    text-shadow: 2px 2px 2px #454545;
 }
 
 .post a div.card-img-overlay div h4 {
     color: #fff !important;
     line-height: 26px;
+    text-shadow: 2px 2px 2px #454545;
 }
 
 .card--link {
