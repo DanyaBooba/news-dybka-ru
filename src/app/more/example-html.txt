@@ -2,11 +2,20 @@
 
 {% block content %}
 
-<title> <заголовок> </title>
+<meta property="og:title" content="<заголовок_статьи>">
+<title><заголовок_статьи></title>
+<meta name="description" content="<описание_статьи>">
+<meta property="og:description" content="<описание_статьи>">
 
-<h1> <заголовок> </h1>
+<h1> <заголовок_статьи> </h1>
 
 <img src="cap.jpg" alt="<описание_изображения>">
+
+<!-- Содержимое статьи -->
+
+<h2>
+    Заголовок второго уровня
+</h2>
 
 <p>
     <блок_текста>
@@ -24,6 +33,18 @@
     </li>
 </ol>
 
+<p>
+    <a href="<ссылка>">
+        <текст_ссылки>
+    </a>
+</p>
+
+<hr>
+
+<img src="name-of-image.jpg" alt="<описание_изображения>">
+
 <p class="post--main-more"> <время_публикации> </p>
+
+<!-- /Содержимое статьи -->
 
 {% endblock %}

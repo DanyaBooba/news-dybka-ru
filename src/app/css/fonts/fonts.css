@@ -8,17 +8,10 @@
 }
 
 @font-face {
-    font-family: Geologica-Bold;
-    font-style: bold;
-    src: url("/fonts/Geologica/Geologica-Bold.woff") format("woff"),
-        url("/fonts/Geologica/Geologica-Bold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: Unbounded;
-    font-style: bold;
-    src: url("/fonts/HalvarBreit/HalvarBreit.woff") format("woff"),
-        url("/fonts/HalvarBreit/HalvarBreit.woff2") format("woff2");
+    font-family: Geologica-Medium;
+    font-style: normal;
+    src: url("/fonts/Geologica/Geologica-Medium.woff") format("woff"),
+        url("/fonts/Geologica/Geologica-Medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -41,7 +34,7 @@ footer {
 
 b,
 .fw-bold {
-    font-family: Geologica-Bold;
+    font-family: Geologica-Medium;
 }
 
 h1,
