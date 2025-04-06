@@ -24,6 +24,7 @@
     font-family: Unbounded;
     text-transform: lowercase !important;
     border-radius: 50px;
+    background-color: rgba(var(--bg-color-rgba-2), .5);
 
     transition: .15s;
 }
@@ -64,9 +65,10 @@
 }
 
 .header--nav-button-in {
-    padding: 8px 12.75px;
+    padding: 5px 10px;
     margin-left: 5px !important;
     margin-right: 5px !important;
+    background-color: rgba(var(--bg-color-rgba-2), .5);
     transition: .15s;
     border-radius: 50px;
 }

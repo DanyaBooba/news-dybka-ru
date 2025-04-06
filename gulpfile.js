@@ -156,19 +156,20 @@ function sitemapCreate() {
 const pagesJson = (done) => {
 	let newpages = [];
 
-	pages.forEach((element) => {
+	pages.forEach(post => {
 		newpages.push({
-			id: element.id,
-			title: element.title,
-			class: element.class,
-			link: element.link,
-			year_publish: element.year_publish,
-			author: element.author,
+			id: post.id,
+			title: post.title,
+			class: post.class,
+			link: post.link,
+			date_publish: post.date_publish,
+			year_publish: post.year_publish,
+			author: post.author,
+			author_link: post.author_link,
 		});
 	});
 
 	fs.writeFileSync("dist/js/posts.json", JSON.stringify(newpages));
-
 	done();
 };
 
@@ -197,15 +198,15 @@ function feedXML() {
 //
 
 const feedTurboXML = (done) => {
-	pages.forEach((el) => {
+	pages.forEach(post => {
 		turboFeed.item({
-			title: el.title,
-			image_url: el.link + "/cap.jpg",
-			image_caption: el.title,
-			url: el.link,
-			author: "Даниил Дыбка",
-			pubDate: "Mon, 1 Jan 2024 12:00:00 GMT",
-			content: el.content,
+			title: post.title,
+			image_url: post.link + "/cap.jpg",
+			image_caption: post.title,
+			url: post.link,
+			author: post.author,
+			pubDate: "Mon, 1 Jan 2025 12:00:00 GMT",
+			content: post.content,
 			menu: turboFeedMenu,
 		});
 	});

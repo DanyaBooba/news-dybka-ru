@@ -1,6 +1,6 @@
 const marginStyle = () => {
     const lineHeight = 48
-    const startMargin = lineHeight + 8
+    const startMargin = lineHeight + 37
     const title = document.querySelector("h1")
 
     const countLines = Math.round(Number(title.offsetHeight) / lineHeight) - 1

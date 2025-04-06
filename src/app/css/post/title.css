@@ -1,0 +1,17 @@
+.post-after-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: .875rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-after-title .post-after-title__author {
+    margin-right: auto;
+}
+
+.post-after-title .post-after-title__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

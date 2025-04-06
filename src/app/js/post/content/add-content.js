@@ -1,18 +1,21 @@
-const AddContentPostTech = () => addContentFromPost('Техника', 'row-tech')
-const AddContentPostUpdates = () => addContentFromPost('Проекты', 'row-updates')
-const AddContentPostSundry = () => addContentFromPost('Разное', 'row-sundry')
-const AddContentPostGames = () => addContentFromPost('Игры', 'row-games')
-const AddContentPostMusic = () => addContentFromPost('Музыка', 'row-music')
-const AddContentPostSearch = () => addContentFromPost('', 'row-search', true)
+const AddContentPostTech = () => addContentFromPost('Техника', 'row-tech', 4)
+const AddContentPostUpdates = () => addContentFromPost('Проекты', 'row-updates', 2)
+const AddContentPostSundry = () => addContentFromPost('Разное', 'row-sundry', 6)
+const AddContentPostGames = () => addContentFromPost('Игры', 'row-games', 4)
+const AddContentPostMusic = () => addContentFromPost('Музыка', 'row-music', 4)
+const AddContentPostSearch = () => addContentFromPost('', 'row-search', -1, true)
 
-function addContentFromPost(tagTitle, rowTitle, isBlockSearch = false) {
+function addContentFromPost(tagTitle, rowTitle, maxPosts, isBlockSearch = false) {
 	const row = document.getElementById(rowTitle)
 	if (!row) return
+
+	const needMaxPosts = row.classList.contains('row-no-need-max-posts')
 
 	$.getJSON('/js/posts.json', function (pages) {
 		let countPosts = 0
 		pages.forEach(post => {
-			if (post.class === tagTitle || isBlockSearch) {
+			if (isBlockSearch) {
+				//
 				const html = contentHTML({
 					tagTitle: tagTitle,
 					id: post.id,
@@ -22,6 +25,20 @@ function addContentFromPost(tagTitle, rowTitle, isBlockSearch = false) {
 
 				row.insertAdjacentHTML('beforeend', html)
 				countPosts += 1
+			}
+			else {
+				//
+				if (post.class === tagTitle && (countPosts < maxPosts || needMaxPosts)) {
+					const html = contentHTML({
+						tagTitle: tagTitle,
+						id: post.id,
+						link: new URL(post.link).pathname,
+						title: post.title
+					})
+
+					row.insertAdjacentHTML('beforeend', html)
+					countPosts += 1
+				}
 			}
 		})
 
