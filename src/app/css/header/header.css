@@ -1,3 +1,23 @@
+@property --pos-x {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 20%;
+}
+
+@keyframes move-gradient {
+    0% {
+        --pos-x: 20%;
+    }
+
+    50% {
+        --pos-x: 30%;
+    }
+
+    100% {
+        --pos-x: 20%;
+    }
+}
+
 .header a {
     color: var(--text-color-1);
     text-decoration: none;
@@ -28,6 +48,39 @@
             radial-gradient(ellipse at center left, rgba(112, 44, 249, 0.5), transparent 50%);
     }
 
+    .header--bg-1 {
+        background-image:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1) 85%),
+            radial-gradient(ellipse at top left, rgba(100, 210, 255, 0.4), transparent 60%),
+            radial-gradient(ellipse at top right, rgba(255, 100, 200, 0.4), transparent 60%),
+            radial-gradient(ellipse at center, rgba(150, 100, 255, 0.3), transparent 70%);
+    }
+
+    .header--bg-2 {
+        background-image:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 1) 90%),
+            radial-gradient(ellipse at 20% 10%, rgba(255, 215, 100, 0.5), transparent 50%),
+            radial-gradient(ellipse at 80% 10%, rgba(180, 100, 255, 0.4), transparent 50%),
+            radial-gradient(ellipse at 50% 80%, rgba(255, 150, 200, 0.3), transparent 60%);
+    }
+
+    .header--bg-3 {
+        background-image:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 1) 85%),
+            radial-gradient(ellipse at top left, rgba(50, 150, 255, 0.5), transparent 60%),
+            radial-gradient(ellipse at bottom right, rgba(0, 200, 255, 0.4), transparent 70%),
+            radial-gradient(ellipse at center, rgba(150, 50, 255, 0.3), transparent 80%);
+    }
+
+    .header--bg-4 {
+        background-image:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1) 85%),
+            radial-gradient(ellipse at var(---pos-x, 20%) var(---pos-y, 30%), rgba(255, 100, 200, 0.5), transparent 60%),
+            radial-gradient(ellipse at var(---pos-x2, 70%) var(---pos-y2, 20%), rgba(100, 200, 255, 0.5), transparent 60%);
+
+        animation: move-gradient 10s infinite ease-in-out;
+    }
+
     .header {
         padding-top: 30px;
         margin-bottom: 20px;
@@ -36,8 +89,8 @@
 
 @media(max-width: 991px) {
     .header {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         top: 0;
         position: fixed;
         width: 100%;

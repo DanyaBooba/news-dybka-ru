@@ -1,0 +1,18 @@
+{% extends "content.html" %}
+
+{% block main %}
+
+<title>Поиск – Special</title>
+
+<h1>Поиск</h1>
+
+<input type="search" class="form-control search-input" onInput="useSearchOnInput()" placeholder="Найти" aria-label="Поиск">
+
+<div class="row row-cols-1 row-cols-lg-3" id="row-search"></div>
+
+<div class="text-center mt-3" id="getcountposts"></div>
+
+<script src="/js/search/use-search.js"></script>
+<script src="/js/search/count-posts.js"></script>
+
+{% endblock %}

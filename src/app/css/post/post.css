@@ -8,8 +8,8 @@
 
 .post a {
     border: none;
-    border-radius: 1rem;
-    transition: .15s;
+    border-radius: 12px;
+    transition: .1s;
 }
 
 .post--font-size {

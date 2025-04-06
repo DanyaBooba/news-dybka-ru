@@ -1,20 +1,28 @@
+.post {
+    border: none !important;
+}
+
 .post .card img {
-    transition: .15s;
+    transition: .1s;
 }
 
 .post .card {
     overflow: hidden;
+    border: none !important;
 }
 
-.post a div.card-img-overlay {
-    display: flex;
+.post .card:not(:hover) .card-img-overlay {
     background: rgba(0, 0, 0, .4);
-    transition: .15s;
 }
 
-.post a div.card-img-overlay:hover {
+.post .card .card-img-overlay {
+    display: flex;
+    transition: .1s;
+}
+
+.post .card:hover .card-img-overlay {
     background-size: 110% !important;
-    background: #ffffff00;
+    background: #ffffff00 !important;
 }
 
 .post a div.card-img-overlay div {
@@ -27,16 +35,16 @@
 
 .post:focus-within .card img {
     transform: scale(1.05);
-    transition: .15s;
+    transition: .1s;
 }
 
 @media(hover: hover) {
-    .post:hover .card img {
+    .post .card:hover img {
         transform: scale(1.05);
-        transition: .15s;
+        transition: .1s;
     }
 
-    .post:hover .card {
+    .post .card:hover {
         box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .2);
     }
 }
@@ -44,7 +52,7 @@
 @media(hover: none) {
     .post:active .card img {
         transform: scale(1.05);
-        transition: .15s;
+        transition: .1s;
     }
 
     .post:active .card {
@@ -67,9 +75,12 @@
 }
 
 .post a div.card-img-overlay div.post-mini h4 {
-    font-size: 1.25rem !important;
     text-shadow: 2px 2px 2px #454545;
     margin-bottom: 0;
+}
+
+.post a div.card-img-overlay div.post-mini h4:not(.h5) {
+    font-size: 1.25rem !important;
 }
 
 .post a div.card-img-overlay div p {
@@ -84,14 +95,6 @@
     color: #fff !important;
     line-height: 26px;
     text-shadow: 2px 2px 2px #454545;
-}
-
-.card--link {
-    transition: .15s;
-}
-
-.card--link:hover {
-    box-shadow: 0 .5rem 1rem rgba(var(--bs-body-color-rgb), .15) !important;
 }
 
 .card--rounded {

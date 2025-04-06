@@ -1,6 +1,5 @@
 .post--main {
     word-break: break-word !important;
-    margin-bottom: 50px;
 }
 
 .post--main .post--main-more {
@@ -128,10 +127,20 @@
     transition: .15s opacity;
 }
 
+@media(min-width: 991.98px) {
+    .post--main {
+        margin-bottom: 50px;
+    }
+}
+
 @media(max-width: 991px) {
     .about-up {
         position: fixed;
         bottom: 30px;
         right: 30px;
+    }
+
+    .post--main {
+        margin-bottom: 2rem;
     }
 }

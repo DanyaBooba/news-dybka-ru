@@ -28,6 +28,23 @@
     transition: .15s;
 }
 
+.header--nav-link.header--nav-link-svg {
+    padding: 8px !important;
+}
+
+.header--nav-link span {
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.header--nav-link span svg {
+    width: 20px;
+    height: 20px;
+    fill: none !important;
+}
+
 .header--nav-link.active {
     background: var(--text-color-7);
     color: var(--text-default) !important;
@@ -47,8 +64,15 @@
 }
 
 .header--nav-button-in {
+    padding: 8px 12.75px;
     margin-left: 5px !important;
     margin-right: 5px !important;
+    transition: .15s;
+    border-radius: 50px;
+}
+
+.header--nav-button-in:is(:hover, :focus) {
+    background-color: var(--text-color-8);
 }
 
 .header--nav-button-in button {
@@ -69,8 +93,8 @@
     border-radius: 2px;
 }
 
-.header--nav-button-in button:focus-visible svg,
-.header--nav-button-in button:hover svg {
+.header--nav-button-in:focus-visible button svg,
+.header--nav-button-in:hover button svg {
     transform: scale(1.1);
 }
 

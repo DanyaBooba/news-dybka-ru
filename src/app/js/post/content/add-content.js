@@ -3,21 +3,22 @@ const AddContentPostUpdates = () => addContentFromPost('Проекты', 'row-up
 const AddContentPostSundry = () => addContentFromPost('Разное', 'row-sundry')
 const AddContentPostGames = () => addContentFromPost('Игры', 'row-games')
 const AddContentPostMusic = () => addContentFromPost('Музыка', 'row-music')
+const AddContentPostSearch = () => addContentFromPost('', 'row-search', true)
 
-function addContentFromPost(tagTitle, rowTitle) {
+function addContentFromPost(tagTitle, rowTitle, isBlockSearch = false) {
 	const row = document.getElementById(rowTitle)
 	if (!row) return
 
 	$.getJSON('/js/posts.json', function (pages) {
 		let countPosts = 0
 		pages.forEach(post => {
-			if (post.class === tagTitle) {
-                const html = contentHTML({
-                    tagTitle : tagTitle,
+			if (post.class === tagTitle || isBlockSearch) {
+				const html = contentHTML({
+					tagTitle: tagTitle,
 					id: post.id,
 					link: new URL(post.link).pathname,
 					title: post.title
-                })
+				})
 
 				row.insertAdjacentHTML('beforeend', html)
 				countPosts += 1
@@ -29,12 +30,11 @@ function addContentFromPost(tagTitle, rowTitle) {
 }
 
 function contentHTML({ id, link, title, tagTitle }) {
-    return `<div class="col post" id="${id}">
+	return `<div class="col post" id="${id}">
                 <a href="${link}/" class="card">
                     <img src="${link}/cap@min.jpg" class="card-img" alt="${title}">
                     <div class="card-img-overlay">
                         <div class="post-2">
-                            <p>${tagTitle}</p>
                             <h4>${title}</h4>
                         </div>
                     </div>

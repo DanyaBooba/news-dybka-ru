@@ -1,0 +1,7 @@
+.breadcrumb-item.active {
+    color: var(--text-color-2) !important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: var(--text-color-2) !important;
+}

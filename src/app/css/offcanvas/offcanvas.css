@@ -3,7 +3,9 @@
 }
 
 .offcanvas .offcanvas-body .offcanvas--item {
-    background: var(--text-color-7);
+    /* background: var(--text-color-7); */
+    background: rgba(var(--bg-color-rgba-2), .3);
+    backdrop-filter: blur(20px);
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1.5rem;
@@ -11,6 +13,10 @@
     color: var(--text-default);
     text-decoration: none;
     margin-bottom: 10px;
+}
+
+.offcanvas .offcanvas-body .offcanvas--item.active {
+    background: rgba(var(--bg-color-rgba-2), 1);
 }
 
 .offcanvas .offcanvas-body .offcanvas--item span svg {
