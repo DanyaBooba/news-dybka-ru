@@ -30,7 +30,6 @@ function addContentFromPost(tagTitle, rowTitle, maxPosts, isBlockSearch = false)
 				//
 				if (post.class === tagTitle && (countPosts < maxPosts || needMaxPosts)) {
 					const html = contentHTML({
-						tagTitle: tagTitle,
 						id: post.id,
 						link: new URL(post.link).pathname,
 						title: post.title
@@ -46,8 +45,8 @@ function addContentFromPost(tagTitle, rowTitle, maxPosts, isBlockSearch = false)
 	})
 }
 
-function contentHTML({ id, link, title, tagTitle }) {
-	return `<div class="col post" id="${id}">
+function contentHTML({ id, link, title }) {
+	return `<div class="col post" id="${id}" title="${title}">
                 <a href="${link}/" class="card">
                     <img src="${link}/cap@min.jpg" class="card-img" alt="${title}">
                     <div class="card-img-overlay">
