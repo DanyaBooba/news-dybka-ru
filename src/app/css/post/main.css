@@ -32,17 +32,13 @@
 
 .post--main img {
     border-radius: 12px;
-
+    margin-bottom: 1rem;
     max-width: 100%;
     height: auto;
 }
 
 .post--main img:first-of-type {
     box-shadow: 0 .125rem .25rem rgba(var(--bs-body-color-rgb), .075) !important;
-}
-
-.post--main img {
-    margin-bottom: .5rem;
 }
 
 .post--main ul li,

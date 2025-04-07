@@ -1,6 +1,18 @@
 [
 	{
-		"id": "",
+		"id": "have-playstation",
+		"title": "PlayStation 5: неожиданная покупка",
+		"class": "Техника",
+		"link": "https://news.dybka.ru/playstation-5-an-unexpected-purchase",
+		"description": "В прошлой статье я говорил о том, что долгое время мечтал о PlayStation 4. Эта мысль долго была в моей голове. А о PlayStation 5 я и не думал особо. Просто в моменте появилась мысль: а что если купить 5 поколение консоли?",
+		"content": "",
+		"year_publish": "2025",
+		"date_publish": "06.04.25",
+		"author": "Даниил Дыбка",
+		"author_link": "daniil-dybka"
+	},
+	{
+		"id": "have-playstation",
 		"title": "PlayStation 4: исполнилась моя мечта",
 		"class": "Техника",
 		"link": "https://news.dybka.ru/playstation-4-a-dream-come-true",
