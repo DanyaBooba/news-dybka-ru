@@ -1,0 +1,9 @@
+@media(max-width: 991.98px) {
+    .row-fake .col-md-1 {
+        display: none;
+    }
+
+    .row-fake .col-md-2 {
+        display: none;
+    }
+}

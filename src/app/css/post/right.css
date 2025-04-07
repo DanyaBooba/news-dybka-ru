@@ -13,29 +13,29 @@
         flex-direction: column;
     }
 
-    .post--right {
+    /* .post--right {
         margin-top: 140px;
-    }
+    } */
 
-    .post--right-margin-1 {
+    /* .post--right-margin-1 {
         margin-top: 93px !important;
-    }
+    } */
 
-    .post--right-margin-2 {
+    /* .post--right-margin-2 {
         margin-top: 169px !important;
-    }
+    } */
 
-    .post--right-margin-3 {
+    /* .post--right-margin-3 {
         margin-top: 207px !important;
-    }
+    } */
 
-    .post--right-margin-4 {
+    /* .post--right-margin-4 {
         margin-top: 245px !important;
-    }
+    } */
 
-    .post--right-margin-2 {
+    /* .post--right-margin-2 {
         margin-top: 169px !important;
-    }
+    } */
 }
 
 @media(max-width: 991px) {
