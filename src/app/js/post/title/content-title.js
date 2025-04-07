@@ -12,14 +12,14 @@ function moveTitleHTML(titleHtml) {
 
 function moveTitle() {
     const title = document.querySelector('h1')
-    if (!title) return
     const root = document.querySelector('.post--main#post--main')
-    if (!root) return
     const row = document.getElementById('rowToInsertTitle')
-    if (!row) return
+    if (!title || !root || !row || !afterTitle) return
 
-    row.insertAdjacentHTML("beforebegin", moveTitleHTML(title.outerHTML))
-    root.removeChild(title)
+    console.log('123: ' + afterTitle)
+
+    // row.insertAdjacentHTML("beforebegin", moveTitleHTML(title.outerHTML))
+    // root.removeChild(title)
 }
 
-moveTitle()
+// moveTitle()

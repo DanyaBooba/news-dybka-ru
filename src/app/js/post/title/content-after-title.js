@@ -6,7 +6,7 @@ function formatDate(inputDate) {
     const month = parseInt(parts[1], 10) - 1
     let year = parseInt(parts[2], 10)
 
-    year = year < 100 ? (year < 25 ? 2000 + year : 1900 + year) : year
+    year += 2000
 
     const date = new Date(year, month, day)
     if (isNaN(date.getTime())) return "Неверная дата"
@@ -58,12 +58,29 @@ const AddContentAfterTitleHTML = ({ author, date, author_link, time_read }) => {
         `)
 }
 
+function moveTitleHTML(titleHtml, moreContent) {
+    return (
+        `
+            <div class="row row-fake">
+                <div class="col-md-1"></div>
+                <div class="col-md-8">
+                    ${titleHtml}
+                    ${moreContent}
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        `
+    )
+}
+
 function AddContentAfterTitle() {
     const title = document.querySelector('h1')
-    if (!title) return
-
     const fullPost = document.getElementById('post--main')
-    if (!fullPost) return
+    if (!title || !fullPost) return
+
+    const root = document.querySelector('.post--main#post--main')
+    const row = document.getElementById('rowToInsertTitle')
+    if (!root || !row) return
 
     const urlSplit = String((new URL(window.location)).pathname).split('/')
     const url = urlSplit[urlSplit.length - 2]
@@ -78,7 +95,8 @@ function AddContentAfterTitle() {
                     time_read: calculateReadingTime(fullPost.outerHTML),
                 })
 
-                title.insertAdjacentHTML('afterend', html)
+                row.insertAdjacentHTML("beforebegin", moveTitleHTML(title.outerHTML, html))
+                root.removeChild(title)
             }
         })
     })

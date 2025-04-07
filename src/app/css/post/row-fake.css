@@ -1,3 +1,7 @@
+.row-fake h1 {
+    margin-bottom: 1rem;
+}
+
 @media(max-width: 991.98px) {
     .row-fake .col-md-1 {
         display: none;
